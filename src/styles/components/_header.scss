@@ -1,0 +1,190 @@
+// Commment here //
+
+@import "../defaults/colors";
+@import "../defaults/fonts";
+@import "./utils";
+@import "../defaults/breakpoints";
+
+/* Styling for header and navbar */
+
+header {
+  height: 12vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    margin-left: 10px;
+    height: 50px;
+    width: 50px;
+    transition: 0.7s;
+  }
+
+  .logo:hover {
+    opacity: 50%;
+    transform: rotate(35deg);
+  }
+
+  .name {
+    display: none;
+    flex-direction: row;
+    font-family: $font1;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-left: 20px;
+    position: relative;
+    top: -10px;
+  }
+  // this element will be hidden on smaller screens and styled below for larger screens //
+
+  .menuButton {
+    background: transparent;
+    border: none !important;
+    z-index: 100;
+    margin: auto;
+    width: 100%;
+
+    .hamburgericon {
+      max-width: 50px;
+      width: 100%;
+      margin: auto;
+    }
+
+    .hamburgericon:hover {
+      opacity: 50%;
+      cursor: pointer;
+    }
+  }
+}
+
+nav {
+  width: 40%;
+  margin-right: 20px;
+  @include nav-text();
+  .navlink,
+  .navlink a, li {
+    list-style-type: none;
+    @include nav-text();
+    transition-duration: 0.5s;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+  li:hover {
+    background-color: $color5;
+  }
+
+  /*above is placeholder hover state*/
+
+  .menuButton {
+    display: flex;
+  }
+
+  .mobile-closed {
+    display: none;
+  }
+
+  .show {
+    display: flex;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    align-items: center;
+    margin: auto;
+    padding: 0;
+    text-align: center;
+    background-color: $color2;
+    opacity: 90%;
+    border-radius: 20px;
+    position: absolute;
+  }
+
+  li {
+    font-size: 1rem;
+    display: inline-block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+  }
+}
+
+// changes for tablet-sized screens and above //
+
+@media screen and (min-width: $medium) {
+  header {
+    .name {
+      display: inline-flex;
+    }
+  }
+  nav {
+    width: 30%;
+    ul {
+      width: 30vw;
+    }
+  }
+}
+
+// changes for computer-sized screens and above //
+
+@media screen and (min-width: $large) {
+  nav {
+    width: 50%;
+
+    .menuButton {
+      display: none;
+    }
+    .mobile-closed {
+      display: flex;
+      flex-direction: row;
+    }
+
+    #mobile-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 8.5vw;
+    }
+    ul {
+      display: flex;
+      flex-direction: row;
+      background-color: transparent;
+    }
+
+    li {
+      padding: 15px;
+    }
+
+    li:hover {
+      transform: translate(0, -5px);
+    }
+  }
+}
+
+// changes for larger computer-sized screens and above //
+
+@media screen and (min-width: $xlarge) {
+  nav {
+    #mobile-nav {
+      margin-right: 2vw;
+    }
+  }
+}
+
+// changes for even larger computer-sized screens and above //
+
+@media screen and (min-width: $xxlarge) {
+  nav {
+    #mobile-nav {
+      margin-right: auto;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+// Commment here //
+
+@import "../defaults/colors";
+@import "../defaults/fonts";
+@import "./utils";
+@import "../defaults/breakpoints";
+
+footer {
+  font-size: 10px;
+  font-style: italic;
+  padding: 5px;
+  margin-top: 10px;
+  width: 97%;
+  text-align: right;
+  min-height: 3vh;
+}

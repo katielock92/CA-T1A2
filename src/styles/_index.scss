@@ -1,0 +1,40 @@
+// Purpose: the primary scss file for my website, with individual pages having their own for specific style variations
+
+/* Import default partial scss files */
+
+@import "./defaults/colors";
+@import "./defaults/fonts";
+@import "./components/header";
+@import "./components/footer";
+
+/* Commence scss styling */
+
+html {
+  font-family: $font2;
+  color: $color1;
+  background-color: $color4;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+// fade-in animation for content - come back and update later!!! //
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

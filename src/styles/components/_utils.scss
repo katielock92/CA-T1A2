@@ -1,0 +1,14 @@
+/* Create mixins */
+
+@mixin inline-flex-row {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+@mixin nav-text {
+    font-family: $font1;
+    font-weight: bold;
+    color: $color1;
+    text-decoration: none;
+    font-size: 1.3rem;
+}

@@ -1,0 +1,214 @@
+/* Import default partial scss files */
+/* Create mixins */
+/* Styling for header and navbar */
+header {
+  height: 12vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+header .logo {
+  margin-left: 10px;
+  height: 50px;
+  width: 50px;
+  transition: 0.7s;
+}
+header .logo:hover {
+  opacity: 50%;
+  transform: rotate(35deg);
+}
+header .name {
+  display: none;
+  flex-direction: row;
+  font-family: "Sora", serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding-left: 20px;
+  position: relative;
+  top: -10px;
+}
+header .menuButton {
+  background: transparent;
+  border: none !important;
+  z-index: 100;
+  margin: auto;
+  width: 100%;
+}
+header .menuButton .hamburgericon {
+  max-width: 50px;
+  width: 100%;
+  margin: auto;
+}
+header .menuButton .hamburgericon:hover {
+  opacity: 50%;
+  cursor: pointer;
+}
+
+nav {
+  width: 40%;
+  margin-right: 20px;
+  font-family: "Sora", serif;
+  font-weight: bold;
+  color: #3C493F;
+  text-decoration: none;
+  font-size: 1.3rem;
+  /*above is placeholder hover state*/
+}
+nav .navlink,
+nav .navlink a, nav li {
+  list-style-type: none;
+  font-family: "Sora", serif;
+  font-weight: bold;
+  color: #3C493F;
+  text-decoration: none;
+  font-size: 1.3rem;
+  transition-duration: 0.5s;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+nav li:hover {
+  background-color: #A2E3C4;
+}
+nav .menuButton {
+  display: flex;
+}
+nav .mobile-closed {
+  display: none;
+}
+nav .show {
+  display: flex;
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  align-items: center;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+  background-color: #7E8D85;
+  opacity: 90%;
+  border-radius: 20px;
+  position: absolute;
+}
+nav li {
+  font-size: 1rem;
+  display: inline-block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  header .name {
+    display: inline-flex;
+  }
+  nav {
+    width: 30%;
+  }
+  nav ul {
+    width: 30vw;
+  }
+}
+@media screen and (min-width: 992px) {
+  nav {
+    width: 50%;
+  }
+  nav .menuButton {
+    display: none;
+  }
+  nav .mobile-closed {
+    display: flex;
+    flex-direction: row;
+  }
+  nav #mobile-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 8.5vw;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+  }
+  nav li {
+    padding: 15px;
+  }
+  nav li:hover {
+    transform: translate(0, -5px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  nav #mobile-nav {
+    margin-right: 2vw;
+  }
+}
+@media screen and (min-width: 1400px) {
+  nav #mobile-nav {
+    margin-right: auto;
+  }
+}
+/* Create mixins */
+footer {
+  font-size: 10px;
+  font-style: italic;
+  padding: 5px;
+  margin-top: 10px;
+  width: 97%;
+  text-align: right;
+  min-height: 3vh;
+}
+
+/* Commence scss styling */
+html {
+  font-family: "Sora", serif;
+  color: #3C493F;
+  background-color: #F0F7F4;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Sora", serif;
+}
+h1 span {
+  color: #A2E3C4;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  h1 {
+    font-size: 5rem;
+  }
+}/*# sourceMappingURL=about.css.map */
