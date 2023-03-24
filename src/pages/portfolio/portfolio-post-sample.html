@@ -4,59 +4,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Katie Lock | Sample Blog Post</title>
-    <link rel="icon" href="../images/favicon.png">
-    <link rel="stylesheet" href="../styles/pages/blog-post.css" />
+    <title>Katie Lock | Sample Portfolio Post</title>
+    <link rel="icon" href="../../images/favicon.png">
+    <link rel="stylesheet" href="../../styles/pages/portfolio-post.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Assistant|Sora"
     />
-    <script src="../scripts/scripts.js"></script>
+    <script src="../../scripts/scripts.js"></script>
   </head>
   <body class="fade">
     <header>
       <div class="home">
-        <a href="../index.html"
+        <a href="../../index.html"
           ><img
             class="logo"
             alt="icon of the letter k"
-            src="../images/logo.png"
+            src="../../images/logo.png"
         /></a>
         <p class="name">katie lock</p>
       </div>
       <nav class="navigation">
         <button class="menuButton">
           <img
-            src="../images/hamburger-menu.png"
+            src="../../images/hamburger-menu.png"
             class="hamburgericon"
             onclick="toggleMobileNav()"
           />
         </button>
         <div id="mobile-nav" class="mobile-closed">
-          <ul>
-            <li class="navlink">
-              <a class="navlink" href="../pages/about.html">about</a>
-            </li>
-            <li class="navlink">
-              <a class="navlink" href="../pages/portfolio.html">portfolio</a>
-            </li>
-            <li class="navlink">
-              <a class="navlink" href="../pages/blog.html">blog</a>
-            </li>
-            <li class="navlink">
-              <a class="navlink" href="../pages/contact.html">contact</a>
-            </li>
-          </ul>
-        </div>
+          <button class="navlink" onclick="window.location.href='../about.html';">about</button>
+          <button class="navlink" onclick="window.location.href='../portfolio.html';">portfolio</button>
+          <button class="navlink" onclick="window.location.href='../blog.html';">blog</button>
+          <button class="navlink" onclick="window.location.href='../contact.html';">contact</a>
+      </div>
       </nav>
     </header>
     <main>
-      <div class="blog-image">
-        <img alt="placeholder image" src="../images/placeholder-image.png" />
+      <div class="portfolio-image">
+        <img alt="placeholder image" src="../../images/placeholder-image.png" />
       </div>
       <article>
-        <h1>Blog title</h1>
-        <h3>Date of blog</h3>
+        <h1>Project title</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor
@@ -111,7 +100,7 @@
           commodo. Sit amet nisl suscipit adipiscing bibendum est ultricies.
         </p>
       </article>
-      <button><a href="blog.html">Back to all posts →</a></button>
+      <button onclick="window.location.href='../portfolio.html';">Back to portfolio →</button>
     </main>
     <footer>
       <p>Fueled by ☕ (Katie Lock 2023)</p>

@@ -62,21 +62,22 @@ nav {
   width: 40%;
   margin-right: 20px;
   @include nav-text();
-  .navlink,
-  .navlink a, li {
-    list-style-type: none;
+  .navlink {
     @include nav-text();
     transition-duration: 0.5s;
-  }
-  a:hover {
-    text-decoration: underline;
+    width: 100%;
+    padding: 15px 0;
+    margin: auto;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    background-color: transparent;
   }
 
-  li:hover {
+  .navlink:hover {
     background-color: $color5;
+    cursor: pointer;
   }
-
-  /*above is placeholder hover state*/
 
   .menuButton {
     display: flex;
@@ -84,35 +85,17 @@ nav {
 
   .mobile-closed {
     display: none;
+    background-color: $color2;
+    opacity: 90%;
+    border-radius: 20px;
+    width: 40vw;
   }
 
   .show {
     display: flex;
-  }
-
-  ul {
-    display: flex;
     flex-direction: column;
-    width: 40vw;
     align-items: center;
-    margin: auto;
-    padding: 0;
-    text-align: center;
-    background-color: $color2;
-    opacity: 90%;
-    border-radius: 20px;
     position: absolute;
-  }
-
-  li {
-    font-size: 1rem;
-    display: inline-block;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 20px;
   }
 }
 
@@ -126,7 +109,7 @@ nav {
   }
   nav {
     width: 30%;
-    ul {
+    .mobile-closed {
       width: 30vw;
     }
   }
@@ -136,7 +119,7 @@ nav {
 
 @media screen and (min-width: $large) {
   nav {
-    width: 50%;
+    width: 30%;
 
     .menuButton {
       display: none;
@@ -144,26 +127,18 @@ nav {
     .mobile-closed {
       display: flex;
       flex-direction: row;
-    }
-
-    #mobile-nav {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-end;
-        margin-right: 8.5vw;
-    }
-    ul {
-      display: flex;
-      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
       background-color: transparent;
     }
 
-    li {
+    .navlink {
       padding: 15px;
+      background-color: transparent;
+
     }
 
-    li:hover {
+    .navlink:hover {
       transform: translate(0, -5px);
     }
   }
@@ -173,7 +148,7 @@ nav {
 
 @media screen and (min-width: $xlarge) {
   nav {
-    #mobile-nav {
+    .mobile-closed {
       margin-right: 2vw;
     }
   }
@@ -183,7 +158,7 @@ nav {
 
 @media screen and (min-width: $xxlarge) {
   nav {
-    #mobile-nav {
+   .mobile-closed {
       margin-right: auto;
     }
   }

@@ -4,29 +4,145 @@
 
 // Commence scss styling //
 
-h1 {
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
     text-align: center;
     font-size: 3rem;
     font-family: $font2;
+
     span {
       color: $color5;
     }
   }
 
-  // changes for tablet-sized screens and above //
+  .bio {
+    .bio-image {
+      align-items: center;
+      width: 90vw;
+    }
+
+    img,
+    .bio-text {
+      display: block;
+      margin: auto;
+      width: clamp(300px, 80vw, 500px);
+    }
+
+    button {
+      display: block;
+      width: 180px;
+      background-color: $color2;
+      border: none;
+      text-align: center;
+      font-family: $font2;
+      padding: 10px;
+      margin: 20px auto;
+      transition: 0.5s;
+      box-shadow: 5px 5px $color3;
+      color: $color5;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    button:hover {
+      transform: scale(1.2);
+      cursor: pointer;
+    }
+  }
+
+  .skills-values-exp {
+    width: clamp(300px, 80vw, 500px);
+
+    .skills,
+    .values {
+      border: 3px solid $color1;
+      box-shadow: 5px 5px $color3;
+      margin: 20px auto;
+      padding: 5px;
+    }
+
+    .exp {
+      padding: 5px;
+    }
+  }
+
+}
+
+// changes for tablet-sized screens and above //
 
 @media screen and (min-width: $medium) {
+  main {
     h1 {
-        font-size: 4rem;
+      font-size: 4rem;
     }
+
+    .bio {
+
+      img,
+      .bio-text {
+        width: clamp(500px, 70vw, 700px);
+      }
+    }
+
+    .skills-values-exp {
+      width: clamp(500px, 70vw, 700px);
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: center;
+
+      .skills-values {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 45%;
+      }
+      .exp {
+        width: 45%;
+        display: inline-flex;
+        
+        flex-direction: row;
+        margin: 20px auto;
+        border: 3px solid black;
+      }
+    }
+
+  }
 }
 
 // changes for computer-sized screens and above //
 
 @media screen and (min-width: $large) {
+  main {
     h1 {
       font-size: 5rem;
     }
+
+    .bio {
+      display: flex;
+      flex-direction: row-reverse;
+
+      .bio-image,
+      img,
+      .bio-text {
+        width: 40vw;
+      }
+
+      .bio-text {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .skills-values-exp {
+      width: 85vw;
+      margin-top: 20px;
+    }
+  }
+
+  
 }
-
-

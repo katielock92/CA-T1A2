@@ -53,55 +53,41 @@ nav {
   color: #3C493F;
   text-decoration: none;
   font-size: 1.3rem;
-  /*above is placeholder hover state*/
 }
-nav .navlink,
-nav .navlink a, nav li {
-  list-style-type: none;
+nav .navlink {
   font-family: "Sora", serif;
   font-weight: bold;
   color: #3C493F;
   text-decoration: none;
   font-size: 1.3rem;
   transition-duration: 0.5s;
+  width: 100%;
+  padding: 15px 0;
+  margin: auto;
+  text-align: center;
+  border: none;
+  border-radius: 20px;
+  background-color: transparent;
 }
-nav a:hover {
-  text-decoration: underline;
-}
-nav li:hover {
+nav .navlink:hover {
   background-color: #A2E3C4;
+  cursor: pointer;
 }
 nav .menuButton {
   display: flex;
 }
 nav .mobile-closed {
   display: none;
-}
-nav .show {
-  display: flex;
-}
-nav ul {
-  display: flex;
-  flex-direction: column;
-  width: 40vw;
-  align-items: center;
-  margin: auto;
-  padding: 0;
-  text-align: center;
   background-color: #7E8D85;
   opacity: 90%;
   border-radius: 20px;
-  position: absolute;
+  width: 40vw;
 }
-nav li {
-  font-size: 1rem;
-  display: inline-block;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 20px;
+nav .show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
 }
 
 @media screen and (min-width: 768px) {
@@ -111,13 +97,13 @@ nav li {
   nav {
     width: 30%;
   }
-  nav ul {
+  nav .mobile-closed {
     width: 30vw;
   }
 }
 @media screen and (min-width: 992px) {
   nav {
-    width: 50%;
+    width: 30%;
   }
   nav .menuButton {
     display: none;
@@ -125,33 +111,25 @@ nav li {
   nav .mobile-closed {
     display: flex;
     flex-direction: row;
-  }
-  nav #mobile-nav {
-    display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    margin-right: 8.5vw;
-  }
-  nav ul {
-    display: flex;
-    flex-direction: row;
     background-color: transparent;
   }
-  nav li {
+  nav .navlink {
     padding: 15px;
+    background-color: transparent;
   }
-  nav li:hover {
+  nav .navlink:hover {
     transform: translate(0, -5px);
   }
 }
 @media screen and (min-width: 1200px) {
-  nav #mobile-nav {
+  nav .mobile-closed {
     margin-right: 2vw;
   }
 }
 @media screen and (min-width: 1400px) {
-  nav #mobile-nav {
+  nav .mobile-closed {
     margin-right: auto;
   }
 }
@@ -227,15 +205,13 @@ main button {
   margin: 10px;
   transition: 0.5s;
   box-shadow: 5px 5px #B3BFB8;
-}
-main button a {
-  text-decoration: none;
   color: #A2E3C4;
   font-weight: bold;
   font-size: 20px;
 }
 main button:hover {
   transform: scale(1.2);
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {

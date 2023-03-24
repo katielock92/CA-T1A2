@@ -67,10 +67,6 @@ main {
     padding: 10px;
     box-shadow: 5px 5px $color3;
     transition: 0.5s;
-  }
-
-  button a {
-    text-decoration: none;
     color: $color5;
     font-weight: bold;
     font-size: 20px;
@@ -78,6 +74,7 @@ main {
 
   button:hover {
     transform: scale(1.2);
+    cursor: pointer;
   }
 }
 

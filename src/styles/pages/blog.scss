@@ -42,10 +42,6 @@ main {
     margin: 10px;
     transition: 0.5s;
     box-shadow: 5px 5px $color3;
-  }
-
-  button a {
-    text-decoration: none;
     color: $color5;
     font-weight: bold;
     font-size: 20px;
@@ -53,6 +49,7 @@ main {
 
   button:hover {
     transform: scale(1.2);
+    cursor: pointer;
   }
 }
 
