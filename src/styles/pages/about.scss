@@ -24,13 +24,47 @@ main {
     .bio-image {
       align-items: center;
       width: 90vw;
+      margin-bottom: -120px;
+
+      .image-bonnie {
+        display: block;
+        margin: auto;
+        position: relative;
+        bottom: 20vh;
+        right: 20vw;
+        width: clamp(150px, 40%, 200px);
+        border-radius: 20px;
+        box-shadow: 8px 8px $color2;
+      }
+
+      .image-frisbee {
+        display: block;
+        margin: auto;
+        position: relative;
+        left: 10vw;
+        width: clamp(250px, 60%, 350px);
+        border-radius: 20px;
+        z-index: -1;
+        box-shadow: 8px 8px $color2;
+      }
     }
 
-    img,
     .bio-text {
       display: block;
       margin: auto;
       width: clamp(300px, 80vw, 500px);
+    }
+
+    .bio-text {
+      span {
+        color: $color5;
+      }
+
+      p {
+        line-height: 1.6;
+        margin-top: 0;
+        font-size: 0.9rem;
+      }
     }
 
     button {
@@ -56,21 +90,89 @@ main {
   }
 
   .skills-values-exp {
+    display: flex;
+    flex-direction: column;
     width: clamp(300px, 80vw, 500px);
+    margin: auto;
+    font-size: 0.9rem;
+    
+    h3 {
+      font-weight: bolder;
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: -10px;
+      color: $color2;
+    }
+
+    ul {
+      position: relative;
+      background-color: $color6;
+      border-radius: 25px;
+      padding: 15px;
+
+      box-shadow: 8px 8px $color2;
+    }
+
+    li {
+      list-style: none;
+      padding-bottom: 1.4rem;
+      border-left: 1px solid $color5;
+      position: relative;
+      padding-left: 20px;
+      margin-left: 10px;
+
+      &:last-child {
+        border: 0px;
+        padding-bottom: 0;
+      }
+
+      &:before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        background: #ffffff;
+        border: 1px solid $color5;
+        box-shadow: 3px 3px 0px $color5;
+        box-shadow: 3px 3px 0px $color5;
+        border-radius: 50%;
+        position: absolute;
+        left: -10px;
+        top: 0px;
+      }
+    }
+
+    .sub {
+      font-weight: bolder;
+      font-size: 1rem;
+    }
+
+    p {
+      line-height: 1.5;
+      margin-top: 0.4rem;
+      padding-left: 10px;
+    }
+
+    em {
+      font-size: 0.7rem;
+      color: $color2;
+    }
+
 
     .skills,
     .values {
-      border: 3px solid $color1;
-      box-shadow: 5px 5px $color3;
-      margin: 20px auto;
-      padding: 5px;
+      margin: 10px auto;
+      padding: 10px;
     }
 
     .exp {
-      padding: 5px;
+      .work,
+      .education {
+        margin: 10px auto;
+        padding: 10px;
+        
+      }
     }
   }
-
 }
 
 // changes for tablet-sized screens and above //
@@ -82,32 +184,38 @@ main {
     }
 
     .bio {
-
-      img,
+      .bio-image,
       .bio-text {
         width: clamp(500px, 70vw, 700px);
+        padding: 20px;
+      }
+
+      .bio-image {
+        margin-bottom: -250px;
+        margin-top: -20px;
+
+        .image-bonnie {
+          bottom: 35vh;
+          right: 15vw;
+          width: clamp(250px, 40%, 400px);
+        }
+
+        .image-frisbee {
+          width: clamp(350px, 60%, 500px);
+        }
       }
     }
 
     .skills-values-exp {
       width: clamp(500px, 70vw, 700px);
-      display: inline-flex;
-      flex-direction: row;
-      justify-content: center;
-
       .skills-values {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 45%;
-      }
-      .exp {
-        width: 45%;
-        display: inline-flex;
-        
+        display: flex;
         flex-direction: row;
-        margin: 20px auto;
-        border: 3px solid black;
+        justify-content: center;
+        .skills, .values {
+          width: 100%;
+          margin: 0 10px;
+        }
       }
     }
 
@@ -127,9 +235,24 @@ main {
       flex-direction: row-reverse;
 
       .bio-image,
-      img,
       .bio-text {
         width: 40vw;
+      }
+
+      .bio-image {
+        margin-bottom: -250px;
+        margin-top: -20px;
+
+        .image-bonnie {
+          bottom: 20vh;
+          right: 8vw;
+          width: clamp(250px, 40%, 400px);
+        }
+
+        .image-frisbee {
+          left: 8vw;
+          width: clamp(350px, 60%, 500px);
+        }
       }
 
       .bio-text {
@@ -140,9 +263,24 @@ main {
 
     .skills-values-exp {
       width: 85vw;
-      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      .skills-values {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-right: 80px;
+        .skills, .values {
+          width: 100%;
+        }
+      }
+      .exp {
+        width: 50%;
+      }
     }
-  }
 
-  
+  }
 }

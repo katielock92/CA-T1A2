@@ -72,6 +72,7 @@ nav .navlink {
 nav .navlink:hover {
   background-color: #A2E3C4;
   cursor: pointer;
+  opacity: 70%;
 }
 nav .menuButton {
   display: flex;
@@ -186,6 +187,7 @@ main article h1 {
   display: block;
   text-align: left;
   font-size: 2rem;
+  margin-top: 30px;
   margin-bottom: -5px;
 }
 main article h4 {
@@ -198,9 +200,12 @@ main article p a {
 }
 main article p {
   margin-bottom: -2px;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 main article ul {
   margin-bottom: -5px;
+  font-size: 0.9rem;
 }
 main .portfolio-image {
   align-items: center;
@@ -209,12 +214,15 @@ main .portfolio-image {
 main .portfolio-image img {
   display: block;
   margin: auto;
-  width: clamp 250px, 100%, 400px;
+  width: clamp(250px, 90%, 400px);
   box-shadow: 10px 10px #B3BFB8;
 }
 main .buttons {
+  margin-top: 20px;
+  width: 95%;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 main button {
   display: block;

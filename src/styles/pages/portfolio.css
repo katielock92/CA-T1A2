@@ -72,6 +72,7 @@ nav .navlink {
 nav .navlink:hover {
   background-color: #A2E3C4;
   cursor: pointer;
+  opacity: 70%;
 }
 nav .menuButton {
   display: flex;
@@ -213,6 +214,9 @@ main .portfolio .project h3 {
   font-size: 1.5rem;
   color: #7E8D85;
   margin-bottom: -10px;
+}
+main .portfolio .project p {
+  font-size: 0.9rem;
 }
 
 @media screen and (min-width: 768px) {
