@@ -1,8 +1,8 @@
-// Purpose: the scss file for any variations unique to individual portfolio posts //
+/* Purpose: the scss file for any variations unique to individual portfolio posts */
 
 @import "../index";
 
-// Commence scss styling //
+/* Commence scss styling */
 
 main {
   display: flex;
@@ -29,7 +29,7 @@ main {
       color: $color2;
     }
 
-    p a{
+    p a {
       color: $color2;
     }
 
@@ -70,26 +70,15 @@ main {
     display: block;
     margin: auto;
     width: 220px;
-    background-color: $color2;
-    border: none;
-    text-align: center;
-    font-family: $font2;
-    padding: 10px;
-    margin: 20px;
-    transition: 0.5s;
-    box-shadow: 5px 5px $color3;
-    color: $color5;
-    font-weight: bold;
-    font-size: 20px;
+    @include square-button();
   }
 
   button:hover {
-    transform: scale(1.2);
-    cursor: pointer;
+    @include button-hover();
   }
 }
 
-// changes for tablet-sized screens and above //
+/* changes for tablet-sized screens and above */
 
 @media screen and (min-width: $medium) {
   main {

@@ -1,6 +1,6 @@
 // Purpose: the primary scss file for my website, with individual pages having their own for specific style variations
 
-/* Import default partial scss files */
+// Import default partial scss files //
 
 @import "./defaults/colors";
 @import "./defaults/fonts";
@@ -10,9 +10,9 @@
 /* Commence scss styling */
 
 html {
+  background-color: $color4;
   font-family: $font2;
   color: $color1;
-  background-color: $color4;
 }
 
 body {
@@ -22,7 +22,12 @@ body {
   justify-content: flex-start;
 }
 
-// fade-in animation for content - come back and update later!!! //
+p {
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+}
+
+/* fade-in animation for content - come back and update later!!! */
 
 .fade {
   animation-name: fade;

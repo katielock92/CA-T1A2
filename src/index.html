@@ -1,61 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Katie Lock | Web Developer</title>
-    <link rel="icon" href="images/favicon.png">
-    <link rel="stylesheet" href="styles/pages/home.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Assistant|Sora"
-    />
-    <script src="scripts/scripts.js"></script>
-  </head>
-  <body class="fade">
-    <header>
-      <div class="home">
-        <a href="index.html"
-          ><img class="logo" alt="icon of the letter k" src="images/logo.png"
-        /></a>
-        <p class="name">katie lock</p>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Katie Lock | Web Developer</title>
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="styles/pages/home.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Assistant|Sora" />
+  <script src="scripts/scripts.js"></script>
+</head>
+
+<body class="fade">
+  <header>
+    <div class="home">
+      <a href="index.html"><img class="logo" alt="icon of the letter k" src="images/logo.png" /></a>
+      <p class="name">katie lock</p>
+    </div>
+    <nav class="navigation">
+      <button class="menuButton">
+        <img src="images/hamburger-menu.png" class="hamburgericon" onclick="toggleMobileNav()" />
+      </button>
+      <div id="mobile-nav" class="mobile-closed">
+        <button class="navlink" onclick="window.location.href='pages/about.html';">about</button>
+        <button class="navlink" onclick="window.location.href='pages/portfolio.html';">portfolio</button>
+        <button class="navlink" onclick="window.location.href='pages/blog.html';">blog</button>
+        <button class="navlink" onclick="window.location.href='pages/contact.html';">contact</a>
       </div>
-      <nav class="navigation">
-        <button class="menuButton">
-          <img
-            src="images/hamburger-menu.png"
-            class="hamburgericon"
-            onclick="toggleMobileNav()"
-          />
-        </button>
-        <div id="mobile-nav" class="mobile-closed">
-            <button class="navlink" onclick="window.location.href='pages/about.html';">about</button>
-            <button class="navlink" onclick="window.location.href='pages/portfolio.html';">portfolio</button>
-            <button class="navlink" onclick="window.location.href='pages/blog.html';">blog</button>
-            <button class="navlink" onclick="window.location.href='pages/contact.html';">contact</a>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <div class="flex-container">
-        <div class="home-text">
-          <h3>👋🏻 hi, i'm...</h3>
-          <h1><span>katie</span> lock</h1>
-          <h2>emerging web developer based in melbourne</h2>
-        </div>
-        <div class="image">
-          <img
-            class="katie"
-            alt="A photo of a smiling woman (Katie) in sepia tones"
-            src="images/Katie_framed.png"
-          />
-        </div>
-        <div class="work"><button onclick="window.location.href='pages/portfolio.html';">see my work →</button></div>
+    </nav>
+  </header>
+  <main>
+    <div class="flex-container">
+      <div class="home-text">
+        <h3>👋🏻 hi, i'm...</h3>
+        <h1><span>katie</span> lock</h1>
+        <h2>emerging web developer based in melbourne</h2>
       </div>
-    </main>
-    <footer>
-      <p>Fueled by ☕ (Katie Lock 2023)</p>
-    </footer>
-  </body>
+      <div class="image">
+        <img class="katie" alt="A photo of a smiling woman (Katie) in sepia tones" src="images/Katie_framed.png" />
+      </div>
+      <div class="work"><button onclick="window.location.href='pages/portfolio.html';">see my work →</button></div>
+    </div>
+  </main>
+  <footer>
+    <p>Fueled by ☕ (Katie Lock 2023)</p>
+  </footer>
+</body>
+
 </html>

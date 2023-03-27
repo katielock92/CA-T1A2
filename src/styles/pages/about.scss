@@ -1,8 +1,8 @@
-// Purpose: the scss file for any variations unique to about.html //
+/* Purpose: the scss file for any variations unique to about.html */
 
 @import "../index";
 
-// Commence scss styling //
+/* Commence scss styling */
 
 main {
   display: flex;
@@ -11,13 +11,8 @@ main {
   justify-content: center;
 
   h1 {
-    text-align: center;
-    font-size: 3rem;
-    font-family: $font2;
-
-    span {
-      color: $color5;
-    }
+    @include page-head();
+    @include keywords();
   }
 
   .bio {
@@ -25,67 +20,52 @@ main {
       align-items: center;
       width: 90vw;
       margin-bottom: -120px;
-
+      
       .image-bonnie {
+        width: clamp(150px, 40%, 200px);
         display: block;
         margin: auto;
         position: relative;
         bottom: 20vh;
         right: 20vw;
-        width: clamp(150px, 40%, 200px);
         border-radius: 20px;
-        box-shadow: 8px 8px $color2;
+        @include shadow-8();
       }
 
       .image-frisbee {
+        width: clamp(250px, 60%, 350px);
         display: block;
         margin: auto;
         position: relative;
         left: 10vw;
-        width: clamp(250px, 60%, 350px);
-        border-radius: 20px;
         z-index: -1;
-        box-shadow: 8px 8px $color2;
+        border-radius: 20px;
+        @include shadow-8();
       }
     }
 
     .bio-text {
       display: block;
-      margin: auto;
       width: clamp(300px, 80vw, 500px);
+      margin: auto;
     }
 
     .bio-text {
-      span {
-        color: $color5;
-      }
+      @include keywords();
 
       p {
-        line-height: 1.6;
         margin-top: 0;
-        font-size: 0.9rem;
       }
     }
 
     button {
       display: block;
       width: 180px;
-      background-color: $color2;
-      border: none;
-      text-align: center;
-      font-family: $font2;
-      padding: 10px;
-      margin: 20px auto;
-      transition: 0.5s;
-      box-shadow: 5px 5px $color3;
-      color: $color5;
-      font-weight: bold;
-      font-size: 20px;
+      @include square-button();
     }
 
     button:hover {
-      transform: scale(1.2);
-      cursor: pointer;
+      @include button-hover();
     }
   }
 
@@ -95,13 +75,13 @@ main {
     width: clamp(300px, 80vw, 500px);
     margin: auto;
     font-size: 0.9rem;
-    
+
     h3 {
+      color: $color2;
       font-weight: bolder;
       font-size: 1.5rem;
       text-align: center;
       margin-bottom: -10px;
-      color: $color2;
     }
 
     ul {
@@ -109,15 +89,14 @@ main {
       background-color: $color6;
       border-radius: 25px;
       padding: 15px;
-
-      box-shadow: 8px 8px $color2;
+      @include shadow-8();
     }
 
     li {
-      list-style: none;
-      padding-bottom: 1.4rem;
-      border-left: 1px solid $color5;
       position: relative;
+      list-style: none;
+      border-left: 1px solid $color5;
+      padding-bottom: 1.4rem;
       padding-left: 20px;
       margin-left: 10px;
 
@@ -157,7 +136,6 @@ main {
       color: $color2;
     }
 
-
     .skills,
     .values {
       margin: 10px auto;
@@ -169,20 +147,15 @@ main {
       .education {
         margin: 10px auto;
         padding: 10px;
-        
       }
     }
   }
 }
 
-// changes for tablet-sized screens and above //
+/* changes for tablet-sized screens and above */
 
 @media screen and (min-width: $medium) {
   main {
-    h1 {
-      font-size: 4rem;
-    }
-
     .bio {
       .bio-image,
       .bio-text {
@@ -193,13 +166,13 @@ main {
       .bio-image {
         margin-bottom: -250px;
         margin-top: -20px;
-
+        
         .image-bonnie {
           bottom: 35vh;
           right: 15vw;
           width: clamp(250px, 40%, 400px);
         }
-
+        
         .image-frisbee {
           width: clamp(350px, 60%, 500px);
         }
@@ -208,11 +181,14 @@ main {
 
     .skills-values-exp {
       width: clamp(500px, 70vw, 700px);
+
       .skills-values {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        .skills, .values {
+
+        .skills,
+        .values {
           width: 100%;
           margin: 0 10px;
         }
@@ -222,14 +198,10 @@ main {
   }
 }
 
-// changes for computer-sized screens and above //
+/* changes for computer-sized screens and above */
 
 @media screen and (min-width: $large) {
   main {
-    h1 {
-      font-size: 5rem;
-    }
-
     .bio {
       display: flex;
       flex-direction: row-reverse;
@@ -266,6 +238,7 @@ main {
       display: flex;
       flex-direction: row;
       justify-content: center;
+
       .skills-values {
         width: 30%;
         display: flex;
@@ -273,10 +246,13 @@ main {
         justify-content: flex-start;
         align-items: center;
         margin-right: 80px;
-        .skills, .values {
+
+        .skills,
+        .values {
           width: 100%;
         }
       }
+
       .exp {
         width: 50%;
       }

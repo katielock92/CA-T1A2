@@ -1,4 +1,4 @@
-// Commment here //
+// Purpose: partial scss file for styling the header on all pages //
 
 @import "../defaults/colors";
 @import "../defaults/fonts";
@@ -28,6 +28,7 @@ header {
 
   .name {
     display: none;
+    /* this div will be hidden on smaller screens and styled below for larger screens */
     flex-direction: row;
     font-family: $font1;
     font-weight: bold;
@@ -36,7 +37,6 @@ header {
     position: relative;
     top: -10px;
   }
-  // this element will be hidden on smaller screens and styled below for larger screens //
 
   .menuButton {
     background: transparent;
@@ -62,6 +62,7 @@ nav {
   width: 40%;
   margin-right: 20px;
   @include nav-text();
+
   .navlink {
     @include nav-text();
     transition-duration: 0.5s;
@@ -100,7 +101,7 @@ nav {
   }
 }
 
-// changes for tablet-sized screens and above //
+/* changes for tablet-sized screens and above */
 
 @media screen and (min-width: $medium) {
   header {
@@ -108,15 +109,17 @@ nav {
       display: inline-flex;
     }
   }
+
   nav {
     width: 30%;
+    
     .mobile-closed {
       width: 30vw;
     }
   }
 }
 
-// changes for computer-sized screens and above //
+/* changes for computer-sized screens and above */
 
 @media screen and (min-width: $large) {
   nav {
@@ -125,6 +128,7 @@ nav {
     .menuButton {
       display: none;
     }
+
     .mobile-closed {
       display: flex;
       flex-direction: row;
@@ -136,7 +140,6 @@ nav {
     .navlink {
       padding: 15px;
       background-color: transparent;
-
     }
 
     .navlink:hover {
@@ -145,7 +148,7 @@ nav {
   }
 }
 
-// changes for larger computer-sized screens and above //
+/* changes for larger computer-sized screens and above */
 
 @media screen and (min-width: $xlarge) {
   nav {
@@ -155,11 +158,11 @@ nav {
   }
 }
 
-// changes for even larger computer-sized screens and above //
+/* changes for even larger computer-sized screens and above */
 
 @media screen and (min-width: $xxlarge) {
   nav {
-   .mobile-closed {
+    .mobile-closed {
       margin-right: auto;
     }
   }

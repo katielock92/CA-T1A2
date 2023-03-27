@@ -1,19 +1,15 @@
-// Purpose: the scss file for any variations unique to blog.html //
+/* Purpose: the scss file for any variations unique to blog.html */
 
 @import "../index";
 
-// Commence scss styling //
-
-h1 {
-  text-align: center;
-  font-size: 3rem;
-  font-family: $font2;
-  span {
-    color: $color5;
-  }
-}
+/* Commence scss styling */
 
 main {
+  h1 {
+    @include page-head();
+    @include keywords();
+  }
+
   h3 {
     margin-top: -15px;
     margin-bottom: -5px;
@@ -30,6 +26,7 @@ main {
     width: 90vw;
     padding: 2%;
     border-bottom: 2px solid $color2;
+
     p {
       font-size: 0.9rem;
     }
@@ -37,48 +34,30 @@ main {
 
   button {
     width: 180px;
-    background-color: $color2;
-    border: none;
-    text-align: center;
-    font-family: $font2;
-    padding: 10px;
-    margin: 10px;
-    transition: 0.5s;
-    box-shadow: 5px 5px $color3;
-    color: $color5;
-    font-weight: bold;
-    font-size: 20px;
+    @include square-button();
   }
 
   button:hover {
-    transform: scale(1.2);
-    cursor: pointer;
+    @include button-hover();
   }
 }
 
-// changes for tablet-sized screens and above //
+/* changes for tablet-sized screens and above */
 
 @media screen and (min-width: $medium) {
-  h1 {
-    font-size: 4rem;
-  }
-
   main {
     .post {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
+      @include flex-row-center();
       margin: 20px;
     }
 
     .blog-image {
-      display: inline-flex;
-      flex-direction: row;
+     @include inline-flex-row();
       width: 45%;
+
       img {
         max-width: 300px;
-        box-shadow: 10px 10px $color3;
+        @include shadow-10();
       }
     }
 
@@ -91,20 +70,18 @@ main {
   }
 }
 
-// changes for computer-sized screens and above //
+/* changes for computer-sized screens and above */
 
 @media screen and (min-width: $large) {
-  h1 {
-    font-size: 5rem;
-  }
-
   main {
     width: 80vw;
     display: block;
     margin: auto;
+
     h2 {
       font-size: 2rem;
     }
+
     h3 {
       font-size: 1.5rem;
     }
@@ -114,10 +91,10 @@ main {
         font-size: 1rem;
       }
     }
+
     .blog-image {
       img {
-        min-width: 300px;
-        max-width: 600px;
+        width: clamp(300px, 100%, 600px);
       }
     }
   }

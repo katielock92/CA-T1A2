@@ -1,8 +1,8 @@
-// Purpose: the scss file for any variations unique to individual blog posts //
+/* Purpose: the scss file for any variations unique to individual blog posts */
 
 @import "../index";
 
-// Commence scss styling //
+/* Commence scss styling */
 
 main {
   display: flex;
@@ -28,13 +28,12 @@ main {
   .blog-image {
     align-items: center;
     width: 90vw;
+
     img {
       display: block;
       margin: auto;
-      min-width: 250px;
-      width: 100%;
-      max-width: 400px;
-      box-shadow: 10px 10px $color3;
+      width: clamp (250px, 100%, 400px);
+      @include shadow-10();
     }
   }
 
@@ -42,48 +41,32 @@ main {
     display: flex;
     flex-direction: column;
     width: 90vw;
-    p {
-      font-size: 0.9rem;
-      line-height: 1.4;
-    }
   }
 
   button {
     display: block;
     margin: auto;
-    width: 220px;
-    background-color: $color2;
-    border: none;
-    text-align: center;
-    font-family: $font2;
-    padding: 10px;
-    margin: 10px;
-    transition: 0.5s;
-    box-shadow: 5px 5px $color3;
-    color: $color5;
-    font-weight: bold;
-    font-size: 20px;
+    @include square-button();
 
   }
 
   button:hover {
-    transform: scale(1.2);
-    cursor: pointer;
+    @include button-hover();
   }
 }
 
-// changes for tablet-sized screens and above //
+/* changes for tablet-sized screens and above */
 
 @media screen and (min-width: $medium) {
   main {
     .blog-image {
       width: 80vw;
+
       img {
-        min-width: 400px;
-        width: 100%;
-        max-width: 650px;
+        width: clamp (400px, 100%, 650px);
       }
     }
+
     article {
       width: 80vw;
     }

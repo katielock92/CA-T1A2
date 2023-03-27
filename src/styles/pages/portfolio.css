@@ -1,5 +1,4 @@
-/* Import default partial scss files */
-/* Create mixins */
+/* Purpose: the scss file for any variations unique to portfolio.html */
 /* Styling for header and navbar */
 header {
   height: 12vh;
@@ -20,6 +19,7 @@ header .logo:hover {
 }
 header .name {
   display: none;
+  /* this div will be hidden on smaller screens and styled below for larger screens */
   flex-direction: row;
   font-family: "Sora", serif;
   font-weight: bold;
@@ -91,6 +91,7 @@ nav .show {
   position: absolute;
 }
 
+/* changes for tablet-sized screens and above */
 @media screen and (min-width: 768px) {
   header .name {
     display: inline-flex;
@@ -102,6 +103,7 @@ nav .show {
     width: 30vw;
   }
 }
+/* changes for computer-sized screens and above */
 @media screen and (min-width: 992px) {
   nav {
     width: 30%;
@@ -124,17 +126,18 @@ nav .show {
     transform: translate(0, -5px);
   }
 }
+/* changes for larger computer-sized screens and above */
 @media screen and (min-width: 1200px) {
   nav .mobile-closed {
     margin-right: 2vw;
   }
 }
+/* changes for even larger computer-sized screens and above */
 @media screen and (min-width: 1400px) {
   nav .mobile-closed {
     margin-right: auto;
   }
 }
-/* Create mixins */
 footer {
   font-size: 10px;
   font-style: italic;
@@ -159,6 +162,7 @@ body {
   justify-content: flex-start;
 }
 
+/* fade-in animation for content - come back and update later!!! */
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
@@ -172,6 +176,7 @@ body {
     opacity: 1;
   }
 }
+/* Commence scss styling */
 h1 {
   text-align: center;
   font-size: 3rem;
@@ -219,6 +224,7 @@ main .portfolio .project p {
   font-size: 0.9rem;
 }
 
+/* changes for tablet-sized screens and above */
 @media screen and (min-width: 768px) {
   h1 {
     font-size: 4rem;
@@ -230,6 +236,7 @@ main .portfolio .project p {
     width: clamp(350px, 100%, 500px);
   }
 }
+/* changes for computer-sized screens and above */
 @media screen and (min-width: 992px) {
   h1 {
     font-size: 5rem;
