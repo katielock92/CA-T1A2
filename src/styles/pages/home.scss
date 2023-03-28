@@ -4,114 +4,129 @@
 
 /* Commence scss styling */
 
-main {
-  width: 90%;
-  margin: auto;
-  margin-top: 15px;
+body {
+  main {
+    width: 90vw;
+    /* centering horizontally but adding extra space on top */
+    margin: 15px auto auto auto;
 
-  h1,
-  h2,
-  h3 {
-    font-family: $font1;
-  }
+    .flex-container {
+      @include flex-col-center();
 
-  h1 {
-    color: $color3;
-    font-size: 4rem;
-    font-weight: bold;
-    text-align: center;
+      .home-text {
+        text-align: center;
 
-    span {
-      color: $color5;
+        h1 {
+          color: $color3;
+          font-size: 3rem;
+          @include keywords();
+        }
+
+        h2 {
+          font-size: 1.4rem;
+        }
+
+        h3 {
+          font-size: 2rem;
+          /* brings the "hi i'm" to sit just above my name */
+          margin-bottom: -45px;
+        }
+      }
+
+      .image {
+        width: 75vw;
+
+        img {
+          /* photo will grow and shrink between 200-450px depending on vw */
+          width: clamp(200px, 100%, 450px);
+          /* image elements default to inline so resetting back to block to allow for auto margin to center */
+          display: block;
+          margin: auto;
+        }
+      }
+
+      .work {
+        button {
+          margin-top: 30px;
+          @include square-button();
+        }
+
+        button:hover {
+          @include button-hover();
+        }
+      }
     }
   }
+}
 
-  h3 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: -45px;
-    text-align: center;
-  }
 
-  h2 {
-    text-align: center;
-    font-size: 1.4rem;
-  }
+/* changes for tablet-sized screens and above */
 
-  .flex-container {
-    display: block;
-  }
-
-  .home-text {
-    flex-direction: column;
-  }
-
-  .katie {
-    width: clamp(300px, 100%, 450px);
-    display: block;
-    margin: auto;
-  }
-
-  .image {
-    width: 75%;
-    display: block;
-    margin: auto;
-  }
-
-  button {
-    display: block;
-    margin: auto;
-    margin-top: 30px;
-    @include square-button();
-  }
-
-  button:hover {
-    @include button-hover();
+@media screen and (min-width: $medium) {
+  body {
+    main {
+      .flex-container {
+        .home-text {
+          h1 {
+            /* to grow font size of heading on larger screen */
+            font-size: 4rem;
+          }
+        }
+      }
+    }
   }
 }
 
 /* changes for computer-sized screens and above */
 
 @media screen and (min-width: $large) {
-  main {
-    .flex-container {
-      display: inline-flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
+  body {
+    main {
+      /* to prevent scrolling on desktop due to footer position */
+      padding-bottom: 1rem;
 
-    .home-text,
-    .image {
-      flex-wrap: nowwrap;
-      width: 44vw;
-      margin-top: 80px;
-    }
+      .flex-container {
+        /* creating a flex row layout with wrap to allow button div to sit below heading while image on right side of screen */
+        display: inline-flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        margin-top: 50px;
 
-    .image {
-      margin-top: 50px;
-    }
+        .home-text,
+        .image,
+        .work {
+          /* max width each div can have to display two next to each other in flex row */
+          width: 44vw;
+        }
 
-    h3 {
-      text-align: left;
-    }
+        .home-text {
+          /* text no longer to be centered now using a flex row design */
+          text-align: left;
 
-    h1 {
-      font-size: 5rem;
-      text-align: left;
-    }
+          h1 {
+            font-size: 5rem;
+          }
 
-    h2 {
-      text-align: left;
-      font-size: 1.5rem;
-      position: relative;
-      top: -40px;
-      left: 25px;
-    }
+          h2 {
+            font-size: 1.5rem;
+            position: relative;
+            /* allows top and left measurements below to be used and position this offset from left */
+            top: -40px;
+            left: 25px;
+          }
+        }
 
-    .work {
-      width: 45vw;
-      position: relative;
-      top: -150px;
+        .work {
+          @include flex-col-center();
+
+          button {
+            margin-top: 0;
+            position: relative;
+            /* allows the button to be shifted upwards and fill the empty space */
+            top: -90px;
+          }
+        }
+      }
     }
   }
 }

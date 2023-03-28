@@ -20,7 +20,7 @@ h1 {
   }
 
   .katie {
-    width: clamp(250px, 100%, 400px);
+    width: clamp(200px, 85%, 400px);
     @include shadow-10();
     margin-top: 20px;
   }
@@ -31,12 +31,12 @@ h1 {
   }
 
   p {
-    @include flex-col-center();
+    @include flex-row-center();
     margin-top: 0;
   }
 
   button {
-    width: 150px;
+    width: 120px;
     @include square-button();
   }
 
@@ -52,12 +52,22 @@ h1 {
     .katie {
       width: clamp(350px, 65%, 450px);
     }
+    button {
+      width: 150px;
+    }
   }
 }
 
 /* changes for computer-sized screens and above */
 
 @media screen and (min-width: $large) {
+
+  body {
+    main {
+      padding-bottom: 1rem;
+    }
+  }
+
   .contact-page {
     .katie {
       margin-top: 0;

@@ -18,26 +18,26 @@ main {
   .bio {
     .bio-image {
       align-items: center;
-      width: 90vw;
-      margin-bottom: -120px;
+      width: 80vw;
+      margin-bottom: -100px;
       
       .image-bonnie {
-        width: clamp(150px, 40%, 200px);
+        width: clamp(100px, 40%, 200px);
         display: block;
         margin: auto;
         position: relative;
-        bottom: 20vh;
-        right: 20vw;
+        bottom: 15vh;
+        right: 25vw;
         border-radius: 20px;
         @include shadow-8();
       }
 
       .image-frisbee {
-        width: clamp(250px, 60%, 350px);
+        width: clamp(180px, 60%, 350px);
         display: block;
         margin: auto;
         position: relative;
-        left: 10vw;
+        left: 8vw;
         z-index: -1;
         border-radius: 20px;
         @include shadow-8();
@@ -46,7 +46,7 @@ main {
 
     .bio-text {
       display: block;
-      width: clamp(300px, 80vw, 500px);
+      width: clamp(220px, 80vw, 500px);
       margin: auto;
     }
 
@@ -60,6 +60,7 @@ main {
 
     button {
       display: block;
+      margin: 30px auto auto auto;
       width: 180px;
       @include square-button();
     }
@@ -72,7 +73,7 @@ main {
   .skills-values-exp {
     display: flex;
     flex-direction: column;
-    width: clamp(300px, 80vw, 500px);
+    width: clamp(220px, 80vw, 500px);
     margin: auto;
     font-size: 0.9rem;
 
@@ -168,7 +169,7 @@ main {
         margin-top: -20px;
         
         .image-bonnie {
-          bottom: 35vh;
+          bottom: 20vh;
           right: 15vw;
           width: clamp(250px, 40%, 400px);
         }
@@ -183,9 +184,7 @@ main {
       width: clamp(500px, 70vw, 700px);
 
       .skills-values {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+        @include flex-row-center();
 
         .skills,
         .values {

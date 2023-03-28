@@ -46,7 +46,7 @@ header .menuButton .hamburgericon:hover {
 }
 
 nav {
-  width: 40%;
+  width: 40vw;
   margin-right: 20px;
   font-family: "Sora", serif;
   font-weight: bold;
@@ -97,16 +97,16 @@ nav .show {
     display: inline-flex;
   }
   nav {
-    width: 30%;
+    width: 25vw;
   }
   nav .mobile-closed {
-    width: 30vw;
+    width: 25vw;
   }
 }
 /* changes for computer-sized screens and above */
 @media screen and (min-width: 992px) {
   nav {
-    width: 30%;
+    width: 30vw;
   }
   nav .menuButton {
     display: none;
@@ -138,37 +138,49 @@ nav .show {
     margin-right: auto;
   }
 }
-footer {
-  font-size: 10px;
+body footer {
+  /* to keep footer text at bottom of page regardless of length of content */
+  position: absolute;
+  bottom: 0;
+  margin-top: 2vh;
+  min-height: 1rem;
+  /* styling of text in footer */
+  width: 97%;
+  font-size: 0.7rem;
   font-style: italic;
   padding: 5px;
-  margin-top: 10px;
-  width: 97%;
   text-align: right;
-  min-height: 3vh;
 }
 
 /* Commence scss styling */
-html {
+body {
+  /* setting basic default styling for body elements */
+  background-color: #F0F7F4;
   font-family: "Sora", serif;
   color: #3C493F;
-  background-color: #F0F7F4;
-}
-
-body {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-}
-
-/* fade-in animation for content - come back and update later!!! */
-.fade {
+  /* ensures background color stretches entire vh even if content doesn't fill page */
+  min-height: 100vh;
+  /* required for the fade-in keyframe below */
   animation-name: fade;
   animation-duration: 1.5s;
+  /* help keep footer text at bottom of all pages (when used in conjuction with _footer.scss */
+  position: relative;
+}
+body main {
+  padding-bottom: 3rem;
+}
+
+p {
+  /* setting standard size for p elements */
+  font-size: 0.9rem;
+  line-height: 1.4rem;
 }
 
 @keyframes fade {
+  /* fades-in html content on page upon load */
   from {
     opacity: 0;
   }
@@ -177,15 +189,26 @@ body {
   }
 }
 /* Commence scss styling */
-h1 {
+main h1 {
+  /* creating styling for page heading on main sub-pages from Home */
   text-align: center;
   font-size: 3rem;
   font-family: "Sora", serif;
+  /* for when one or a few keywords change colour within a span */
 }
-h1 span {
+@media screen and (min-width: 768px) {
+  main h1 {
+    font-size: 4rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  main h1 {
+    font-size: 5rem;
+  }
+}
+main h1 span {
   color: #A2E3C4;
 }
-
 main h3 {
   margin-top: -15px;
   margin-bottom: -5px;
@@ -206,28 +229,27 @@ main article p {
 }
 main button {
   width: 180px;
+  /* styling for the main button used across the site */
   background-color: #7E8D85;
   border: none;
-  text-align: center;
-  font-family: "Sora", serif;
-  padding: 10px;
-  margin: 10px;
-  transition: 0.5s;
   box-shadow: 5px 5px #B3BFB8;
   color: #A2E3C4;
-  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  font-family: "Sora", serif;
   font-size: 20px;
+  font-weight: bold;
+  transition: 0.5s;
+  margin-bottom: 20px;
 }
 main button:hover {
+  /* hover behaviour for the above button */
   transform: scale(1.2);
   cursor: pointer;
 }
 
 /* changes for tablet-sized screens and above */
 @media screen and (min-width: 768px) {
-  h1 {
-    font-size: 4rem;
-  }
   main .post {
     display: flex;
     flex-direction: row;
@@ -242,7 +264,11 @@ main button:hover {
   }
   main .blog-image img {
     max-width: 300px;
+    /* styling shortcut for a 10px box shadow */
     box-shadow: 10px 10px #B3BFB8;
+  }
+  main button {
+    margin-bottom: 0;
   }
   main article {
     display: inline-flex;
@@ -253,9 +279,6 @@ main button:hover {
 }
 /* changes for computer-sized screens and above */
 @media screen and (min-width: 992px) {
-  h1 {
-    font-size: 5rem;
-  }
   main {
     width: 80vw;
     display: block;
@@ -271,7 +294,6 @@ main button:hover {
     font-size: 1rem;
   }
   main .blog-image img {
-    min-width: 300px;
-    max-width: 600px;
+    width: clamp(300px, 100%, 600px);
   }
 }/*# sourceMappingURL=blog.css.map */

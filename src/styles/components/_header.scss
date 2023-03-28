@@ -59,7 +59,7 @@ header {
 }
 
 nav {
-  width: 40%;
+  width: 40vw;
   margin-right: 20px;
   @include nav-text();
 
@@ -111,10 +111,10 @@ nav {
   }
 
   nav {
-    width: 30%;
+    width: 25vw;
     
     .mobile-closed {
-      width: 30vw;
+      width: 25vw;
     }
   }
 }
@@ -123,7 +123,7 @@ nav {
 
 @media screen and (min-width: $large) {
   nav {
-    width: 30%;
+    width: 30vw;
 
     .menuButton {
       display: none;
