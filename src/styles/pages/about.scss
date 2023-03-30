@@ -5,10 +5,7 @@
 /* Commence scss styling */
 
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include flex-col-center();
 
   h1 {
     @include page-head();
@@ -17,17 +14,18 @@ main {
 
   .bio {
     .bio-image {
+      /* the two images will overlap each other so will require some additional property changes, such as a relative position to allow positional properties to be used. negative margins used due to empty space from the images no longer being in their original position */
       align-items: center;
       width: 80vw;
-      margin-bottom: -100px;
-      
+      margin-bottom: -80px;
+
       .image-bonnie {
         width: clamp(100px, 40%, 200px);
         display: block;
         margin: auto;
         position: relative;
-        bottom: 15vh;
-        right: 25vw;
+        bottom: 100px;
+        right: 80px;
         border-radius: 20px;
         @include shadow-8();
       }
@@ -37,7 +35,8 @@ main {
         display: block;
         margin: auto;
         position: relative;
-        left: 8vw;
+        left: 30px;
+        /* has this image sitting below the other one */
         z-index: -1;
         border-radius: 20px;
         @include shadow-8();
@@ -75,7 +74,6 @@ main {
     flex-direction: column;
     width: clamp(220px, 80vw, 500px);
     margin: auto;
-    font-size: 0.9rem;
 
     h3 {
       color: $color2;
@@ -86,6 +84,7 @@ main {
     }
 
     ul {
+      /* to create the background around each of the listed sections */
       position: relative;
       background-color: $color6;
       border-radius: 25px;
@@ -107,29 +106,29 @@ main {
       }
 
       &:before {
+        /* used to create the connected dots on left-hand side */
         content: "";
         width: 15px;
         height: 15px;
         background: #ffffff;
         border: 1px solid $color5;
         box-shadow: 3px 3px 0px $color5;
-        box-shadow: 3px 3px 0px $color5;
         border-radius: 50%;
         position: absolute;
         left: -10px;
         top: 0px;
       }
-    }
 
-    .sub {
-      font-weight: bolder;
-      font-size: 1rem;
-    }
+      .sub {
+        font-weight: bolder;
+        font-size: 1rem;
+      }
 
-    p {
-      line-height: 1.5;
-      margin-top: 0.4rem;
-      padding-left: 10px;
+      p {
+        line-height: 1.5;
+        margin-top: 0.4rem;
+        padding-left: 10px;
+      }
     }
 
     em {
@@ -144,6 +143,7 @@ main {
     }
 
     .exp {
+
       .work,
       .education {
         margin: 10px auto;
@@ -157,7 +157,10 @@ main {
 
 @media screen and (min-width: $medium) {
   main {
+
+    /* adjusting element sizes and positioning for larger screen size */
     .bio {
+
       .bio-image,
       .bio-text {
         width: clamp(500px, 70vw, 700px);
@@ -167,14 +170,15 @@ main {
       .bio-image {
         margin-bottom: -250px;
         margin-top: -20px;
-        
+
         .image-bonnie {
-          bottom: 20vh;
-          right: 15vw;
-          width: clamp(250px, 40%, 400px);
+          bottom: 220px;
+          right: 140px;
+          width: clamp(200px, 40%, 400px);
         }
-        
+
         .image-frisbee {
+          left: 75px;
           width: clamp(350px, 60%, 500px);
         }
       }
@@ -184,6 +188,7 @@ main {
       width: clamp(500px, 70vw, 700px);
 
       .skills-values {
+        /* skills and values now show next to each other */
         @include flex-row-center();
 
         .skills,
@@ -201,10 +206,13 @@ main {
 
 @media screen and (min-width: $large) {
   main {
+
     .bio {
+      /* bio text now shown inline with images */
       display: flex;
       flex-direction: row-reverse;
 
+      /* adjusting element sizes and positioning for larger screen size */
       .bio-image,
       .bio-text {
         width: 40vw;
@@ -232,6 +240,7 @@ main {
       }
     }
 
+    /* adjustment to flexbox to show skills/values on left-hand side, and experience/education on right-hand side */
     .skills-values-exp {
       width: 85vw;
       display: flex;

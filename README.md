@@ -65,6 +65,8 @@ These wireframes are high level and not indicatative of margins, padding, font s
 - **Tablet view** expands to add my name next to the logo (similar to what will show on desktop view), but retains the hamburger navigation menu
 - **Desktop view** takes advantage of the larger width to have the navigation bar visible in a row in the top-right of the header
 
+Images of the wireframes (along with comments about any major design changes made in development) can be found below.
+
 ### **Page Design 1: Home**
 
 *Mobile view:*
@@ -111,7 +113,9 @@ Note: the two main design deviations from the wireframes below are:
 ![Basic wireframe for portfolio page in desktop view](../KatieLock_T1A2/docs/Sitemap%20and%20Wireframes/Portfolio%20-%20Desktop%20View.png)
 
 
-### **Page 4: Individual portfolio posts**
+### **Page Design 4: Individual portfolio posts**
+
+Note: one design deviation here is that all portfolio posts will have a button at the bottom prompting the user to return to the main portfolio page. There is the option with the css to have a second button displayed alongside this button, for use when any projects can actually be directly linked.
 
 *Mobile view:*
 
@@ -125,7 +129,7 @@ Note: the two main design deviations from the wireframes below are:
 
 ![Basic wireframe for individual portfolio post page in desktop view](../KatieLock_T1A2/docs/Sitemap%20and%20Wireframes/Portfolio%20Post%20-%20Desktop%20View.png)
 
-### **Page 5: Blog**
+### **Page Design 5: Blog**
 
 Note: the wireframes only show 3-4 blog posts for simplicity, however the website is set up to show a minimum of 5.
 
@@ -141,7 +145,9 @@ Note: the wireframes only show 3-4 blog posts for simplicity, however the websit
 
 ![Basic wireframe for blog page in desktop view](../KatieLock_T1A2/docs/Sitemap%20and%20Wireframes/Blog%20-%20Desktop%20View.png)
 
-### **Page 6: Individual blog posts**
+### **Page Design 6: Individual blog posts**
+
+Note: similar to the portfolio post page, when developing the individual blog post page I opted to add a bottom at the bottom of the blog, which returns the user back to the main blog page.
 
 *Mobile view:*
 
@@ -155,7 +161,7 @@ Note: the wireframes only show 3-4 blog posts for simplicity, however the websit
 
 ![Basic wireframe for individual blog post page in desktop view](../KatieLock_T1A2/docs/Sitemap%20and%20Wireframes/Blog%20Post%20-%20Desktop%20View.png)
 
-### **Page 7: Contact**
+### **Page Design 7: Contact**
 
 *Mobile view:*
 
@@ -172,17 +178,107 @@ Note: the wireframes only show 3-4 blog posts for simplicity, however the websit
 ___
 
 ## **Final Result**
-xyz
 
-___
-*Requirements:*
-- A link (URL) to your published portfolio website
-- A link to your GitHub repo
-- A link to your presentation video
-- Description of your portfolio website, including,
-    - Purpose
-    - Functionality / features
-    - Sitemap
-    - Screenshots
-    - Target audience
-    - Tech stack (e.g. html, css, deployment platform, etc)
+I am really happy with the outcome and what I have achieved! Please see below for a directory of screenshots for each page on my site, sorted by the various viewports:
+
+### **Page 1: Home**
+
+*Mobile view:*
+
+![Alt](../imagepathhere)
+
+*Tablet view:*
+
+![Alt](../imagepathhere)
+
+*Desktop view:*
+
+![Alt](../imagepathhere)
+
+### **Page 2: About**
+
+*Mobile view:*
+
+![Alt](../imagepathhere)
+
+*Tablet view:*
+
+![Alt](../imagepathhere)
+
+*Desktop view:*
+
+![Alt](../imagepathhere)
+
+### **Page 3: Portfolio**
+
+*Mobile view:*
+
+![Alt](../imagepathhere)
+
+*Tablet view:*
+
+![Alt](../imagepathhere)
+
+*Desktop view:*
+
+![Alt](../imagepathhere)
+
+### **Page(s) 4: Individual portfolio posts**
+
+There are a few different posts linked, along with a placeholder version:
+
+*Mobile view:*
+
+![Alt](../imagepathhere)
+
+*Tablet view:*
+
+![Alt](../imagepathhere)
+
+*Desktop view:*
+
+![Alt](../imagepathhere)
+
+### **Page 5: Blog**
+
+*Mobile view:*
+
+![Alt](../imagepathhere)
+
+*Tablet view:*
+
+![Alt](../imagepathhere)
+
+*Desktop view:*
+
+![Alt](../imagepathhere)
+
+### **Page(s) 6: Individual blog posts**
+
+There are a few different posts linked, along with a placeholder version:
+
+*Mobile view:*
+
+![Alt](../imagepathhere)
+
+*Tablet view:*
+
+![Alt](../imagepathhere)
+
+*Desktop view:*
+
+![Alt](../imagepathhere)
+
+### **Page 7: Contact**
+
+*Mobile view:*
+
+![Alt](../imagepathhere)
+
+*Tablet view:*
+
+![Alt](../imagepathhere)
+
+*Desktop view:*
+
+![Alt](../imagepathhere)

@@ -14,12 +14,13 @@ header .logo {
   transition: 0.7s;
 }
 header .logo:hover {
+  /* animates the logo with a rotation upon hover */
   opacity: 50%;
   transform: rotate(35deg);
 }
 header .name {
   display: none;
-  /* this div will be hidden on smaller screens and styled below for larger screens */
+  /* this div will be hidden on smaller screens and styled below ready for larger screens */
   flex-direction: row;
   font-family: "Sora", serif;
   font-weight: bold;
@@ -28,33 +29,18 @@ header .name {
   position: relative;
   top: -10px;
 }
-header .menuButton {
-  background: transparent;
-  border: none !important;
-  z-index: 100;
-  margin: auto;
-  width: 100%;
-}
-header .menuButton .hamburgericon {
-  max-width: 50px;
-  width: 100%;
-  margin: auto;
-}
-header .menuButton .hamburgericon:hover {
-  opacity: 50%;
-  cursor: pointer;
-}
-
-nav {
+header nav {
   width: 40vw;
   margin-right: 20px;
+  /* styling for text in navifation bar */
   font-family: "Sora", serif;
   font-weight: bold;
   color: #3C493F;
   text-decoration: none;
   font-size: 1.3rem;
 }
-nav .navlink {
+header nav .navlink {
+  /* styling for text in navifation bar */
   font-family: "Sora", serif;
   font-weight: bold;
   color: #3C493F;
@@ -69,22 +55,41 @@ nav .navlink {
   border-radius: 20px;
   background-color: transparent;
 }
-nav .navlink:hover {
+header nav .navlink:hover {
+  /* background of a menu option changes when hovered over */
   background-color: #A2E3C4;
   cursor: pointer;
   opacity: 70%;
 }
-nav .menuButton {
+header nav .menuButton {
   display: flex;
+  background: transparent;
+  border: none;
+  /* ensures this button sits above other elements */
+  z-index: 100;
+  margin: auto;
+  width: 100%;
 }
-nav .mobile-closed {
+header nav .menuButton .hamburgericon {
+  max-width: 50px;
+  width: 100%;
+  margin: auto;
+}
+header nav .menuButton .hamburgericon:hover {
+  /* opacity fade and change in cursor upon hover to indicate clicking will provide an action */
+  opacity: 50%;
+  cursor: pointer;
+}
+header nav .mobile-closed {
+  /* hides the drop-down menu by default upon load */
   display: none;
   background-color: #7E8D85;
   opacity: 90%;
   border-radius: 20px;
   width: 40vw;
 }
-nav .show {
+header nav .show {
+  /* JS changes the class to this for menu when the menu button is clicked, this section specifies how it'll be displayed/positioned once shown */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -94,47 +99,54 @@ nav .show {
 /* changes for tablet-sized screens and above */
 @media screen and (min-width: 768px) {
   header .name {
+    /* displays name next to logo once this width is reached */
     display: inline-flex;
   }
-  nav {
+  header nav {
+    /* adjusting width of mobile menu in relation to vw since screen size is now larger */
     width: 25vw;
   }
-  nav .mobile-closed {
+  header nav .mobile-closed {
     width: 25vw;
   }
 }
 /* changes for computer-sized screens and above */
 @media screen and (min-width: 992px) {
-  nav {
+  header nav {
     width: 30vw;
   }
-  nav .menuButton {
+  header nav .menuButton {
+    /* hides the hamburger menu button now that nav links are horizontal */
     display: none;
   }
-  nav .mobile-closed {
+  header nav .mobile-closed {
+    /* adjusts the nav bar to display horizontally */
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
     background-color: transparent;
   }
-  nav .navlink {
+  header nav .navlink {
     padding: 15px;
     background-color: transparent;
   }
-  nav .navlink:hover {
+  header nav .navlink:hover {
+    /* animates the nav links when hovered */
     transform: translate(0, -5px);
   }
 }
 /* changes for larger computer-sized screens and above */
 @media screen and (min-width: 1200px) {
-  nav .mobile-closed {
+  header nav .mobile-closed {
+    /* adjusting right-side margin for even larger screens to have nav menu closer to screen edge */
     margin-right: 2vw;
   }
 }
 /* changes for even larger computer-sized screens and above */
 @media screen and (min-width: 1400px) {
-  nav .mobile-closed {
+  header nav .mobile-closed {
+    /* adjusting right-side margin for even larger screens to have nav menu closer to screen edge */
     margin-right: auto;
   }
 }
@@ -195,6 +207,7 @@ body main {
   margin: 15px auto auto auto;
 }
 body main .flex-container {
+  /* commonly used centered flex column display */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -290,6 +303,7 @@ body main .flex-container .work button:hover {
     left: 25px;
   }
   body main .flex-container .work {
+    /* commonly used centered flex column display */
     display: flex;
     flex-direction: column;
     justify-content: center;

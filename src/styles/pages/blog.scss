@@ -16,6 +16,7 @@ main {
     color: $color5;
   }
 
+  /* image not displayed on mobile view - this is added and styled for larger screens below */
   .blog-image {
     display: none;
   }
@@ -25,11 +26,8 @@ main {
     flex-direction: column;
     width: 90vw;
     padding: 2%;
+    /* as there is no image for each blog post preview, a line is used to visually separate each post preview */
     border-bottom: 2px solid $color2;
-
-    p {
-      font-size: 0.9rem;
-    }
   }
 
   button {
@@ -48,6 +46,7 @@ main {
 @media screen and (min-width: $medium) {
   main {
     .post {
+      /* layout will now have a row for each post with the image inline */
       @include flex-row-center();
       margin: 20px;
     }
@@ -55,10 +54,13 @@ main {
     .blog-image {
      @include inline-flex-row();
       width: 45%;
+      padding-top: 30px;
+      
 
       img {
-        max-width: 300px;
+        width: clamp(250px, 80%, 450px);
         @include shadow-10();
+        border: 3px solid $color1;
       }
     }
 
@@ -68,9 +70,19 @@ main {
 
     article {
       display: inline-flex;
+      justify-content: flex-start;
+      padding: 0;
+      margin: 20px 0;
       width: 45%;
-      margin: 20px;
       border: none;
+    }
+
+    /* classifying each post preview as left or right to assist in creating a consistent margin down the middle of the page */
+    .left {
+      margin-right: 3vw;
+    }
+    .right {
+      margin-left: 3vw;
     }
   }
 }
@@ -87,19 +99,9 @@ main {
       font-size: 2rem;
     }
 
-    h3 {
-      font-size: 1.5rem;
-    }
-
-    article {
-      p {
-        font-size: 1rem;
-      }
-    }
-
     .blog-image {
       img {
-        width: clamp(300px, 100%, 600px);
+        width: clamp(300px, 80%, 600px);
       }
     }
   }

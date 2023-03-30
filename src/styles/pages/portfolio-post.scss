@@ -10,6 +10,19 @@ main {
   align-items: center;
   margin-top: 20px;
 
+  .portfolio-image {
+    align-items: center;
+    width: 90vw;
+
+    img {
+      display: block;
+      margin: auto;
+      width: clamp(250px, 90%, 400px);
+      border: 3px solid $color1;
+      box-shadow: 10px 10px $color3;
+    }
+  }
+
   article {
     display: flex;
     flex-direction: column;
@@ -29,14 +42,11 @@ main {
       color: $color2;
     }
 
-    p a {
-      color: $color2;
-    }
-
     p {
       margin-bottom: -2px;
-      font-size: 0.9rem;
-      line-height: 1.4;
+      a {
+        color: $color2;
+      }
     }
 
     ul {
@@ -46,18 +56,7 @@ main {
 
   }
 
-  .portfolio-image {
-    align-items: center;
-    width: 90vw;
-
-    img {
-      display: block;
-      margin: auto;
-      width: clamp(250px, 90%, 400px);
-      box-shadow: 10px 10px $color3;
-    }
-  }
-
+  /* this class is only used to contain a div if there are two buttons rather than just one at the bottom of a portfolio post*/
   .buttons {
     margin-top: 20px;
     width: 95%;
@@ -82,6 +81,7 @@ main {
 
 @media screen and (min-width: $medium) {
   main {
+    /* adjusting width and image sizes for larger screens */
     .portfolio-image {
       width: 80vw;
 

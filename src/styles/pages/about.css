@@ -14,12 +14,13 @@ header .logo {
   transition: 0.7s;
 }
 header .logo:hover {
+  /* animates the logo with a rotation upon hover */
   opacity: 50%;
   transform: rotate(35deg);
 }
 header .name {
   display: none;
-  /* this div will be hidden on smaller screens and styled below for larger screens */
+  /* this div will be hidden on smaller screens and styled below ready for larger screens */
   flex-direction: row;
   font-family: "Sora", serif;
   font-weight: bold;
@@ -28,33 +29,18 @@ header .name {
   position: relative;
   top: -10px;
 }
-header .menuButton {
-  background: transparent;
-  border: none !important;
-  z-index: 100;
-  margin: auto;
-  width: 100%;
-}
-header .menuButton .hamburgericon {
-  max-width: 50px;
-  width: 100%;
-  margin: auto;
-}
-header .menuButton .hamburgericon:hover {
-  opacity: 50%;
-  cursor: pointer;
-}
-
-nav {
+header nav {
   width: 40vw;
   margin-right: 20px;
+  /* styling for text in navifation bar */
   font-family: "Sora", serif;
   font-weight: bold;
   color: #3C493F;
   text-decoration: none;
   font-size: 1.3rem;
 }
-nav .navlink {
+header nav .navlink {
+  /* styling for text in navifation bar */
   font-family: "Sora", serif;
   font-weight: bold;
   color: #3C493F;
@@ -69,22 +55,41 @@ nav .navlink {
   border-radius: 20px;
   background-color: transparent;
 }
-nav .navlink:hover {
+header nav .navlink:hover {
+  /* background of a menu option changes when hovered over */
   background-color: #A2E3C4;
   cursor: pointer;
   opacity: 70%;
 }
-nav .menuButton {
+header nav .menuButton {
   display: flex;
+  background: transparent;
+  border: none;
+  /* ensures this button sits above other elements */
+  z-index: 100;
+  margin: auto;
+  width: 100%;
 }
-nav .mobile-closed {
+header nav .menuButton .hamburgericon {
+  max-width: 50px;
+  width: 100%;
+  margin: auto;
+}
+header nav .menuButton .hamburgericon:hover {
+  /* opacity fade and change in cursor upon hover to indicate clicking will provide an action */
+  opacity: 50%;
+  cursor: pointer;
+}
+header nav .mobile-closed {
+  /* hides the drop-down menu by default upon load */
   display: none;
   background-color: #7E8D85;
   opacity: 90%;
   border-radius: 20px;
   width: 40vw;
 }
-nav .show {
+header nav .show {
+  /* JS changes the class to this for menu when the menu button is clicked, this section specifies how it'll be displayed/positioned once shown */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -94,47 +99,54 @@ nav .show {
 /* changes for tablet-sized screens and above */
 @media screen and (min-width: 768px) {
   header .name {
+    /* displays name next to logo once this width is reached */
     display: inline-flex;
   }
-  nav {
+  header nav {
+    /* adjusting width of mobile menu in relation to vw since screen size is now larger */
     width: 25vw;
   }
-  nav .mobile-closed {
+  header nav .mobile-closed {
     width: 25vw;
   }
 }
 /* changes for computer-sized screens and above */
 @media screen and (min-width: 992px) {
-  nav {
+  header nav {
     width: 30vw;
   }
-  nav .menuButton {
+  header nav .menuButton {
+    /* hides the hamburger menu button now that nav links are horizontal */
     display: none;
   }
-  nav .mobile-closed {
+  header nav .mobile-closed {
+    /* adjusts the nav bar to display horizontally */
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
     background-color: transparent;
   }
-  nav .navlink {
+  header nav .navlink {
     padding: 15px;
     background-color: transparent;
   }
-  nav .navlink:hover {
+  header nav .navlink:hover {
+    /* animates the nav links when hovered */
     transform: translate(0, -5px);
   }
 }
 /* changes for larger computer-sized screens and above */
 @media screen and (min-width: 1200px) {
-  nav .mobile-closed {
+  header nav .mobile-closed {
+    /* adjusting right-side margin for even larger screens to have nav menu closer to screen edge */
     margin-right: 2vw;
   }
 }
 /* changes for even larger computer-sized screens and above */
 @media screen and (min-width: 1400px) {
-  nav .mobile-closed {
+  header nav .mobile-closed {
+    /* adjusting right-side margin for even larger screens to have nav menu closer to screen edge */
     margin-right: auto;
   }
 }
@@ -190,10 +202,11 @@ p {
 }
 /* Commence scss styling */
 main {
+  /* commonly used centered flex column display */
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 main h1 {
   /* creating styling for page heading on main sub-pages from Home */
@@ -216,17 +229,18 @@ main h1 span {
   color: #A2E3C4;
 }
 main .bio .bio-image {
+  /* the two images will overlap each other so will require some additional property changes, such as a relative position to allow positional properties to be used. negative margins used due to empty space from the images no longer being in their original position */
   align-items: center;
   width: 80vw;
-  margin-bottom: -100px;
+  margin-bottom: -80px;
 }
 main .bio .bio-image .image-bonnie {
   width: clamp(100px, 40%, 200px);
   display: block;
   margin: auto;
   position: relative;
-  bottom: 15vh;
-  right: 25vw;
+  bottom: 100px;
+  right: 80px;
   border-radius: 20px;
   /* styling shortcut for a 8px box shadow */
   box-shadow: 8px 8px #7E8D85;
@@ -236,7 +250,8 @@ main .bio .bio-image .image-frisbee {
   display: block;
   margin: auto;
   position: relative;
-  left: 8vw;
+  left: 30px;
+  /* has this image sitting below the other one */
   z-index: -1;
   border-radius: 20px;
   /* styling shortcut for a 8px box shadow */
@@ -282,7 +297,6 @@ main .skills-values-exp {
   flex-direction: column;
   width: clamp(220px, 80vw, 500px);
   margin: auto;
-  font-size: 0.9rem;
 }
 main .skills-values-exp h3 {
   color: #7E8D85;
@@ -292,6 +306,7 @@ main .skills-values-exp h3 {
   margin-bottom: -10px;
 }
 main .skills-values-exp ul {
+  /* to create the background around each of the listed sections */
   position: relative;
   background-color: #E3F0E9;
   border-radius: 25px;
@@ -312,23 +327,23 @@ main .skills-values-exp li:last-child {
   padding-bottom: 0;
 }
 main .skills-values-exp li:before {
+  /* used to create the connected dots on left-hand side */
   content: "";
   width: 15px;
   height: 15px;
   background: #ffffff;
   border: 1px solid #A2E3C4;
   box-shadow: 3px 3px 0px #A2E3C4;
-  box-shadow: 3px 3px 0px #A2E3C4;
   border-radius: 50%;
   position: absolute;
   left: -10px;
   top: 0px;
 }
-main .skills-values-exp .sub {
+main .skills-values-exp li .sub {
   font-weight: bolder;
   font-size: 1rem;
 }
-main .skills-values-exp p {
+main .skills-values-exp li p {
   line-height: 1.5;
   margin-top: 0.4rem;
   padding-left: 10px;
@@ -350,6 +365,9 @@ main .skills-values-exp .exp .education {
 
 /* changes for tablet-sized screens and above */
 @media screen and (min-width: 768px) {
+  main {
+    /* adjusting element sizes and positioning for larger screen size */
+  }
   main .bio .bio-image,
   main .bio .bio-text {
     width: clamp(500px, 70vw, 700px);
@@ -360,17 +378,20 @@ main .skills-values-exp .exp .education {
     margin-top: -20px;
   }
   main .bio .bio-image .image-bonnie {
-    bottom: 20vh;
-    right: 15vw;
-    width: clamp(250px, 40%, 400px);
+    bottom: 220px;
+    right: 140px;
+    width: clamp(200px, 40%, 400px);
   }
   main .bio .bio-image .image-frisbee {
+    left: 75px;
     width: clamp(350px, 60%, 500px);
   }
   main .skills-values-exp {
     width: clamp(500px, 70vw, 700px);
   }
   main .skills-values-exp .skills-values {
+    /* skills and values now show next to each other */
+    /* commonly used centered flex row display */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -384,9 +405,14 @@ main .skills-values-exp .exp .education {
 }
 /* changes for computer-sized screens and above */
 @media screen and (min-width: 992px) {
+  main {
+    /* adjustment to flexbox to show skills/values on left-hand side, and experience/education on right-hand side */
+  }
   main .bio {
+    /* bio text now shown inline with images */
     display: flex;
     flex-direction: row-reverse;
+    /* adjusting element sizes and positioning for larger screen size */
   }
   main .bio .bio-image,
   main .bio .bio-text {

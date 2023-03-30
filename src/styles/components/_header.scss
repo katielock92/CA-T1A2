@@ -22,13 +22,14 @@ header {
   }
 
   .logo:hover {
+    /* animates the logo with a rotation upon hover */
     opacity: 50%;
     transform: rotate(35deg);
   }
 
   .name {
     display: none;
-    /* this div will be hidden on smaller screens and styled below for larger screens */
+    /* this div will be hidden on smaller screens and styled below ready for larger screens */
     flex-direction: row;
     font-family: $font1;
     font-weight: bold;
@@ -38,112 +39,124 @@ header {
     top: -10px;
   }
 
-  .menuButton {
-    background: transparent;
-    border: none !important;
-    z-index: 100;
-    margin: auto;
-    width: 100%;
-
-    .hamburgericon {
-      max-width: 50px;
-      width: 100%;
-      margin: auto;
-    }
-
-    .hamburgericon:hover {
-      opacity: 50%;
-      cursor: pointer;
-    }
-  }
-}
-
-nav {
-  width: 40vw;
-  margin-right: 20px;
-  @include nav-text();
-
-  .navlink {
-    @include nav-text();
-    transition-duration: 0.5s;
-    width: 100%;
-    padding: 15px 0;
-    margin: auto;
-    text-align: center;
-    border: none;
-    border-radius: 20px;
-    background-color: transparent;
-  }
-
-  .navlink:hover {
-    background-color: $color5;
-    cursor: pointer;
-    opacity: 70%;
-  }
-
-  .menuButton {
-    display: flex;
-  }
-
-  .mobile-closed {
-    display: none;
-    background-color: $color2;
-    opacity: 90%;
-    border-radius: 20px;
+  nav {
     width: 40vw;
-  }
+    margin-right: 20px;
+    @include nav-text();
 
-  .show {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
+    .navlink {
+      @include nav-text();
+      transition-duration: 0.5s;
+      width: 100%;
+      padding: 15px 0;
+      margin: auto;
+      text-align: center;
+      border: none;
+      border-radius: 20px;
+      background-color: transparent;
+    }
+
+    .navlink:hover {
+      /* background of a menu option changes when hovered over */
+      background-color: $color5;
+      cursor: pointer;
+      opacity: 70%;
+    }
+
+    .menuButton {
+      display: flex;
+      background: transparent;
+      border: none;
+      /* ensures this button sits above other elements */
+      z-index: 100;
+      margin: auto;
+      width: 100%;
+
+      .hamburgericon {
+        max-width: 50px;
+        width: 100%;
+        margin: auto;
+      }
+
+      .hamburgericon:hover {
+        /* opacity fade and change in cursor upon hover to indicate clicking will provide an action */
+        opacity: 50%;
+        cursor: pointer;
+      }
+    }
+
+    .mobile-closed {
+      /* hides the drop-down menu by default upon load */
+      display: none;
+      background-color: $color2;
+      opacity: 90%;
+      border-radius: 20px;
+      width: 40vw;
+    }
+
+    .show {
+      /* JS changes the class to this for menu when the menu button is clicked, this section specifies how it'll be displayed/positioned once shown */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+    }
   }
 }
+
 
 /* changes for tablet-sized screens and above */
 
 @media screen and (min-width: $medium) {
   header {
     .name {
+      /* displays name next to logo once this width is reached */
       display: inline-flex;
     }
-  }
 
-  nav {
-    width: 25vw;
-    
-    .mobile-closed {
+    nav {
+      /* adjusting width of mobile menu in relation to vw since screen size is now larger */
       width: 25vw;
+
+      .mobile-closed {
+        width: 25vw;
+      }
     }
   }
 }
 
+
+
 /* changes for computer-sized screens and above */
 
 @media screen and (min-width: $large) {
-  nav {
-    width: 30vw;
+  header {
+    nav {
+      width: 30vw;
 
-    .menuButton {
-      display: none;
-    }
+      .menuButton {
+        /* hides the hamburger menu button now that nav links are horizontal */
+        display: none;
+      }
 
-    .mobile-closed {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: flex-end;
-      background-color: transparent;
-    }
+      .mobile-closed {
+        /* adjusts the nav bar to display horizontally */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: transparent;
+      }
 
-    .navlink {
-      padding: 15px;
-      background-color: transparent;
-    }
+      .navlink {
+        padding: 15px;
+        background-color: transparent;
+      }
 
-    .navlink:hover {
-      transform: translate(0, -5px);
+      .navlink:hover {
+        /* animates the nav links when hovered */
+        transform: translate(0, -5px);
+      }
     }
   }
 }
@@ -151,9 +164,12 @@ nav {
 /* changes for larger computer-sized screens and above */
 
 @media screen and (min-width: $xlarge) {
-  nav {
-    .mobile-closed {
-      margin-right: 2vw;
+  header {
+    nav {
+      .mobile-closed {
+        /* adjusting right-side margin for even larger screens to have nav menu closer to screen edge */
+        margin-right: 2vw;
+      }
     }
   }
 }
@@ -161,9 +177,12 @@ nav {
 /* changes for even larger computer-sized screens and above */
 
 @media screen and (min-width: $xxlarge) {
-  nav {
-    .mobile-closed {
-      margin-right: auto;
+  header {
+    nav {
+      .mobile-closed {
+        /* adjusting right-side margin for even larger screens to have nav menu closer to screen edge */
+        margin-right: auto;
+      }
     }
   }
 }

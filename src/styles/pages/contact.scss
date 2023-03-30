@@ -4,88 +4,102 @@
 
 /* Commence scss styling */
 
-h1 {
-  @include page-head();
-  @include keywords();
-  margin-bottom: 20px;
+main {
+
+  h1 {
+    @include page-head();
+    @include keywords();
+    margin-bottom: 20px;
+  }
+
+  .contact-page {
+    @include flex-col-center();
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .katie {
+      width: clamp(200px, 85%, 400px);
+      @include shadow-10();
+      margin-top: 20px;
+    }
+    /* styling the contact icon that displays next to each button */
+    .icon {
+      width: 35px;
+      margin-right: 30px;
+    }
+
+    p {
+      @include flex-row-center();
+      margin-top: 0;
+    }
+
+    button {
+      width: 120px;
+      @include square-button();
+    }
+
+    button:hover {
+      @include button-hover();
+    }
+  }
 }
 
-.contact-page {
-  @include flex-col-center();
 
-  .contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .katie {
-    width: clamp(200px, 85%, 400px);
-    @include shadow-10();
-    margin-top: 20px;
-  }
-
-  .icon {
-    width: 35px;
-    margin-right: 30px;
-  }
-
-  p {
-    @include flex-row-center();
-    margin-top: 0;
-  }
-
-  button {
-    width: 120px;
-    @include square-button();
-  }
-
-  button:hover {
-    @include button-hover();
-  }
-}
 
 /* changes for tablet-sized screens and above */
 
 @media screen and (min-width: $medium) {
-  .contact-page {
-    .katie {
-      width: clamp(350px, 65%, 450px);
-    }
-    button {
-      width: 150px;
+  main {
+    /* increasing button and image size for larger screen */
+    .contact-page {
+      .katie {
+        width: clamp(350px, 65%, 450px);
+      }
+
+      button {
+        width: 150px;
+      }
     }
   }
 }
+
 
 /* changes for computer-sized screens and above */
 
 @media screen and (min-width: $large) {
 
   body {
+    /* this is making an adjustment to what is set in index.scss based on this page in desktop view */
     main {
       padding-bottom: 1rem;
     }
   }
 
-  .contact-page {
-    .katie {
-      margin-top: 0;
-    }
+  main {
+    .contact-page {
+      .katie {
+        margin-top: 0;
+      }
 
-    .contact {
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: center;
-      align-items: center;
-      margin-top: 15px;
-    }
+      .contact {
+        /* changing flexbox to row reverse to have the contact buttons on the right-hand side of the photo (rather than above) */
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+      }
 
-    .contact-buttons {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      margin-left: 50px;
+      .contact-buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-left: 50px;
+      }
     }
   }
 }
