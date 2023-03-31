@@ -9,14 +9,11 @@ body {
   footer {
     /* to keep footer text at bottom of page regardless of length of content */
     position: absolute;
-    bottom: 0;
-    margin-top: 2vh;
-    min-height: 1rem;
+    bottom: 0.3rem;
     /* styling of text in footer */
-    width: 97%;
+    width: 98%;
     font-size: 0.7rem;
     font-style: italic;
-    padding: 5px;
     text-align: right;
   }
 }

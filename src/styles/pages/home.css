@@ -23,7 +23,6 @@ header .name {
   /* this div will be hidden on smaller screens and styled below ready for larger screens */
   flex-direction: row;
   font-family: "Sora", serif;
-  font-weight: bold;
   font-size: 1.5rem;
   padding-left: 20px;
   position: relative;
@@ -34,7 +33,6 @@ header nav {
   margin-right: 20px;
   /* styling for text in navifation bar */
   font-family: "Sora", serif;
-  font-weight: bold;
   color: #3C493F;
   text-decoration: none;
   font-size: 1.3rem;
@@ -42,7 +40,6 @@ header nav {
 header nav .navlink {
   /* styling for text in navifation bar */
   font-family: "Sora", serif;
-  font-weight: bold;
   color: #3C493F;
   text-decoration: none;
   font-size: 1.3rem;
@@ -153,14 +150,11 @@ header nav .show {
 body footer {
   /* to keep footer text at bottom of page regardless of length of content */
   position: absolute;
-  bottom: 0;
-  margin-top: 2vh;
-  min-height: 1rem;
+  bottom: 0.3rem;
   /* styling of text in footer */
-  width: 97%;
+  width: 98%;
   font-size: 0.7rem;
   font-style: italic;
-  padding: 5px;
   text-align: right;
 }
 
@@ -182,7 +176,7 @@ body {
   position: relative;
 }
 body main {
-  padding-bottom: 3rem;
+  padding-bottom: 2.5rem;
 }
 
 p {
@@ -244,6 +238,7 @@ body main .flex-container .image img {
 }
 body main .flex-container .work button {
   margin-top: 30px;
+  margin-bottom: 2rem;
   /* styling for the main button used across the site */
   background-color: #7E8D85;
   border: none;
@@ -253,7 +248,6 @@ body main .flex-container .work button {
   text-align: center;
   font-family: "Sora", serif;
   font-size: 20px;
-  font-weight: bold;
   transition: 0.5s;
 }
 body main .flex-container .work button:hover {
@@ -263,6 +257,14 @@ body main .flex-container .work button:hover {
 }
 
 /* changes for tablet-sized screens and above */
+body {
+  /* to prevent scrolling on tablet and desktop due to footer position */
+  min-height: 97vh;
+}
+body main {
+  padding-bottom: 0;
+}
+
 @media screen and (min-width: 768px) {
   body main .flex-container .home-text h1 {
     /* to grow font size of heading on larger screen */
@@ -271,10 +273,6 @@ body main .flex-container .work button:hover {
 }
 /* changes for computer-sized screens and above */
 @media screen and (min-width: 992px) {
-  body main {
-    /* to prevent scrolling on desktop due to footer position */
-    padding-bottom: 1rem;
-  }
   body main .flex-container {
     /* creating a flex row layout with wrap to allow button div to sit below heading while image on right side of screen */
     display: inline-flex;

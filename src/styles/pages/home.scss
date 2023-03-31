@@ -48,6 +48,7 @@ body {
       .work {
         button {
           margin-top: 30px;
+          margin-bottom: 2rem;
           @include square-button();
         }
 
@@ -61,6 +62,15 @@ body {
 
 
 /* changes for tablet-sized screens and above */
+
+body {
+  /* to prevent scrolling on tablet and desktop due to footer position */
+  min-height: 97vh;
+  main {
+    padding-bottom: 0;
+  }
+}
+
 
 @media screen and (min-width: $medium) {
   body {
@@ -82,8 +92,6 @@ body {
 @media screen and (min-width: $large) {
   body {
     main {
-      /* to prevent scrolling on desktop due to footer position */
-      padding-bottom: 1rem;
 
       .flex-container {
         /* creating a flex row layout with wrap to allow button div to sit below heading while image on right side of screen */

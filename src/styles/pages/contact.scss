@@ -4,6 +4,14 @@
 
 /* Commence scss styling */
 
+body {
+  /* to prevent scrolling on this shorter page due to footer position */
+  min-height: 97vh;
+  main {
+    padding-bottom: 0;
+  }
+}
+
 main {
 
   h1 {
@@ -19,10 +27,11 @@ main {
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-bottom: 2.5rem;
     }
 
     .katie {
-      width: clamp(200px, 85%, 400px);
+      width: clamp(200px, 85%, 350px);
       @include shadow-10();
       margin-top: 20px;
     }
@@ -53,11 +62,12 @@ main {
 /* changes for tablet-sized screens and above */
 
 @media screen and (min-width: $medium) {
+
   main {
     /* increasing button and image size for larger screen */
     .contact-page {
       .katie {
-        width: clamp(350px, 65%, 450px);
+        width: clamp(350px, 65%, 400px);
       }
 
       button {
@@ -71,13 +81,6 @@ main {
 /* changes for computer-sized screens and above */
 
 @media screen and (min-width: $large) {
-
-  body {
-    /* this is making an adjustment to what is set in index.scss based on this page in desktop view */
-    main {
-      padding-bottom: 1rem;
-    }
-  }
 
   main {
     .contact-page {
