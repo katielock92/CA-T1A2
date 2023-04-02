@@ -68,7 +68,7 @@ main {
   button {
     display: block;
     margin: auto;
-    width: 220px;
+    width: clamp(100px, 45%, 220px);
     @include square-button();
   }
 

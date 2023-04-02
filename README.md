@@ -47,11 +47,11 @@ ___
 ## **Sitemap, Design and Wireframes**
 ### **Sitemap**
 This sitemap image was developed prior to commencing any coding, and remained consistent as I developed the website in terms of the structure and flow of the pages:
-![Image of the sitemap for this portfolio website](../KatieLock_T1A2/docs/Sitemap%20and%20Wireframes/Sitemap.png)
+![Image of the sitemap for this portfolio website](./docs/Sitemap%20and%20Wireframes/Sitemap.png)
 
 ### **Design**
 A font and colour palette was developed prior to commencing coding:
-![Image of the font and colour palette](../KatieLock_T1A2/docs/Sitemap%20and%20Wireframes/Font%20and%20Colour%20Palette.png)
+![Image of the font and colour palette](./docs/Sitemap%20and%20Wireframes/Font%20and%20Colour%20Palette.png)
 In the end, I used *Sora* as the font across all areas of the site even though *Assistant* is still available as an option in my *_fonts.scss* file.
 
 ### **Wireframes**
@@ -71,15 +71,15 @@ Images of the wireframes (along with comments about any major design changes mad
 
 *Mobile view:*
 
-![Basic wireframe for home page in mobile view](../KatieLock_T1A2/docs/Sitemap%20and%20Wireframes/Home%20-%20Mobile%20View.png)
+![Basic wireframe for home page in mobile view](./docs/Sitemap%20and%20Wireframes/Home%20-%20Mobile%20View.png)
 
 *Tablet view:*
 
-![Basic wireframe for home page in tablet view](../KatieLock_T1A2/docs/Sitemap%20and%20Wireframes/Home%20-%20Tablet%20View.png)
+![Basic wireframe for home page in tablet view](./docs/Sitemap%20and%20Wireframes/Home%20-%20Tablet%20View.png)
 
 *Desktop view:*
 
-![Basic wireframe for home page in desktop view](../KatieLock_T1A2/docs/Sitemap%20and%20Wireframes/Home%20-%20Desktop%20View.png)
+![Basic wireframe for home page in desktop view](./docs/Sitemap%20and%20Wireframes/Home%20-%20Desktop%20View.png)
 
 ### **Page Design 2: About**
 Note: the two main design deviations from the wireframes below are:
@@ -88,29 +88,29 @@ Note: the two main design deviations from the wireframes below are:
 
 *Mobile view:*
 
-![Basic wireframe for about page in mobile view](../KatieLock_T1A2/docs/Sitemap%20and%20Wireframes/About%20-%20Mobile%20View.png)
+![Basic wireframe for about page in mobile view](./docs/Sitemap%20and%20Wireframes/About%20-%20Mobile%20View.png)
 
 *Tablet view:*
 
-![Basic wireframe for about page in tablet view](../KatieLock_T1A2/docs/Sitemap%20and%20Wireframes/About%20-%20Tablet%20View.png)
+![Basic wireframe for about page in tablet view](./docs/Sitemap%20and%20Wireframes/About%20-%20Tablet%20View.png)
 
 *Desktop view:*
 
-![Basic wireframe for about page in desktop view](../KatieLock_T1A2/docs/Sitemap%20and%20Wireframes/About%20-%20Desktop%20View.png)
+![Basic wireframe for about page in desktop view](./docs/Sitemap%20and%20Wireframes/About%20-%20Desktop%20View.png)
 
 ### **Page Design 3: Portfolio**
 
 *Mobile view:*
 
-![Basic wireframe for portfolio page in mobile view](../KatieLock_T1A2/docs/Sitemap%20and%20Wireframes/Portfolio%20-%20Mobile%20View.png)
+![Basic wireframe for portfolio page in mobile view](./docs/Sitemap%20and%20Wireframes/Portfolio%20-%20Mobile%20View.png)
 
 *Tablet view:*
 
-![Basic wireframe for portfolio page in tablet view](../KatieLock_T1A2/docs/Sitemap%20and%20Wireframes/Portfolio%20-%20Tablet%20View.png)
+![Basic wireframe for portfolio page in tablet view](./docs/Sitemap%20and%20Wireframes/Portfolio%20-%20Tablet%20View.png)
 
 *Desktop view:*
 
-![Basic wireframe for portfolio page in desktop view](../KatieLock_T1A2/docs/Sitemap%20and%20Wireframes/Portfolio%20-%20Desktop%20View.png)
+![Basic wireframe for portfolio page in desktop view](./docs/Sitemap%20and%20Wireframes/Portfolio%20-%20Desktop%20View.png)
 
 
 ### **Page Design 4: Individual portfolio posts**
@@ -119,15 +119,15 @@ Note: one design deviation here is that all portfolio posts will have a button a
 
 *Mobile view:*
 
-![Basic wireframe for individual portfolio post page in mobile view](../KatieLock_T1A2/docs/Sitemap%20and%20Wireframes/Portfolio%20Post%20-%20Mobile%20View.png)
+![Basic wireframe for individual portfolio post page in mobile view](./docs/Sitemap%20and%20Wireframes/Portfolio%20Post%20-%20Mobile%20View.png)
 
 *Tablet view:*
 
-![Basic wireframe for individual portfolio post page in tablet view](../KatieLock_T1A2/docs/Sitemap%20and%20Wireframes/Portfolio%20Post%20-%20Tablet%20View.png)
+![Basic wireframe for individual portfolio post page in tablet view](./docs/Sitemap%20and%20Wireframes/Portfolio%20Post%20-%20Tablet%20View.png)
 
 *Desktop view:*
 
-![Basic wireframe for individual portfolio post page in desktop view](../KatieLock_T1A2/docs/Sitemap%20and%20Wireframes/Portfolio%20Post%20-%20Desktop%20View.png)
+![Basic wireframe for individual portfolio post page in desktop view](./docs/Sitemap%20and%20Wireframes/Portfolio%20Post%20-%20Desktop%20View.png)
 
 ### **Page Design 5: Blog**
 
@@ -135,15 +135,15 @@ Note: the wireframes only show 3-4 blog posts for simplicity, however the websit
 
 *Mobile view:*
 
-![Basic wireframe for blog page in mobile view](../KatieLock_T1A2/docs/Sitemap%20and%20Wireframes/Blog%20-%20Mobile%20View.png)
+![Basic wireframe for blog page in mobile view](./docs/Sitemap%20and%20Wireframes/Blog%20-%20Mobile%20View.png)
 
 *Tablet view:*
 
-![Basic wireframe for blog page in tablet view](../KatieLock_T1A2/docs/Sitemap%20and%20Wireframes/Blog%20-%20Tablet%20View.png)
+![Basic wireframe for blog page in tablet view](./docs/Sitemap%20and%20Wireframes/Blog%20-%20Tablet%20View.png)
 
 *Desktop view:*
 
-![Basic wireframe for blog page in desktop view](../KatieLock_T1A2/docs/Sitemap%20and%20Wireframes/Blog%20-%20Desktop%20View.png)
+![Basic wireframe for blog page in desktop view](./docs/Sitemap%20and%20Wireframes/Blog%20-%20Desktop%20View.png)
 
 ### **Page Design 6: Individual blog posts**
 
@@ -151,29 +151,29 @@ Note: similar to the portfolio post page, when developing the individual blog po
 
 *Mobile view:*
 
-![Basic wireframe for individual blog post page in mobile view](../KatieLock_T1A2/docs/Sitemap%20and%20Wireframes/Blog%20Post%20-%20Mobile%20View.png)
+![Basic wireframe for individual blog post page in mobile view](./docs/Sitemap%20and%20Wireframes/Blog%20Post%20-%20Mobile%20View.png)
 
 *Tablet view:*
 
-![Basic wireframe for individual blog post page in tablet view](../KatieLock_T1A2/docs/Sitemap%20and%20Wireframes/Blog%20Post%20-%20Tablet%20View.png)
+![Basic wireframe for individual blog post page in tablet view](./docs/Sitemap%20and%20Wireframes/Blog%20Post%20-%20Tablet%20View.png)
 
 *Desktop view:*
 
-![Basic wireframe for individual blog post page in desktop view](../KatieLock_T1A2/docs/Sitemap%20and%20Wireframes/Blog%20Post%20-%20Desktop%20View.png)
+![Basic wireframe for individual blog post page in desktop view](./docs/Sitemap%20and%20Wireframes/Blog%20Post%20-%20Desktop%20View.png)
 
 ### **Page Design 7: Contact**
 
 *Mobile view:*
 
-![Basic wireframe for contact page in mobile view](../KatieLock_T1A2/docs/Sitemap%20and%20Wireframes/Contact%20-%20Mobile%20View.png)
+![Basic wireframe for contact page in mobile view](./docs/Sitemap%20and%20Wireframes/Contact%20-%20Mobile%20View.png)
 
 *Tablet view:*
 
-![Basic wireframe for blog page in tablet view](../KatieLock_T1A2/docs/Sitemap%20and%20Wireframes/Contact%20-%20Tablet%20View.png)
+![Basic wireframe for blog page in tablet view](./docs/Sitemap%20and%20Wireframes/Contact%20-%20Tablet%20View.png)
 
 *Desktop view:*
 
-![Basic wireframe for blog page in desktop view](../KatieLock_T1A2/docs/Sitemap%20and%20Wireframes/Contact%20-%20Desktop%20View.png)
+![Basic wireframe for blog page in desktop view](./docs/Sitemap%20and%20Wireframes/Contact%20-%20Desktop%20View.png)
 
 ___
 
@@ -185,43 +185,55 @@ I am really happy with the outcome and what I have achieved! Please see below fo
 
 *Mobile view:*
 
-![Alt](../imagepathhere)
+![Home page of my website in mobile view](./docs/Screenshots/Home-Mobile.png)
 
 *Tablet view:*
 
-![Alt](../imagepathhere)
+![Home page of my website in tablet view](./docs/Screenshots/Home-Tablet.png)
 
 *Desktop view:*
 
-![Alt](../imagepathhere)
+![Home page of my website in desktop view](./docs/Screenshots/Home-Desktop.png)
 
 ### **Page 2: About**
 
 *Mobile view:*
 
-![Alt](../imagepathhere)
+![About page of my website in mobile view (1/5)](./docs/Screenshots/About-Mobile-P1.png)
+![About page of my website in mobile view (2/5)](./docs/Screenshots/About-Mobile-P2.png)
+![About page of my website in mobile view (3/5)](./docs/Screenshots/About-Mobile-P3.png)
+![About page of my website in mobile view (4/5)](./docs/Screenshots/About-Mobile-P4.png)
+![About page of my website in mobile view (5/5)](./docs/Screenshots/About-Mobile-P5.png)
 
 *Tablet view:*
 
-![Alt](../imagepathhere)
+![About page of my website in tablet view (1/3)](./docs/Screenshots/About-Tablet-P1.png)
+![About page of my website in tablet view (2/3)](./docs/Screenshots/About-Tablet-P2.png)
+![About page of my website in tablet view (3/3)](./docs/Screenshots/About-Tablet-P3.png)
 
 *Desktop view:*
 
-![Alt](../imagepathhere)
+![About page of my website in desktop view (1/2)](./docs/Screenshots/About-Desktop-P1.png)
+![About page of my website in desktop view (2/2)](./docs/Screenshots/About-Desktop-P2.png)
 
 ### **Page 3: Portfolio**
 
 *Mobile view:*
 
-![Alt](../imagepathhere)
+![Portfolio page of my website in mobile view (1/3)](./docs/Screenshots/Portfolio-Mobile-P1.png)
+![Portfolio page of my website in mobile view (2/3)](./docs/Screenshots/Portfolio-Mobile-P2.png)
+![Portfolio page of my website in mobile view (3/3)](./docs/Screenshots/Portfolio-Mobile-P3.png)
 
 *Tablet view:*
 
-![Alt](../imagepathhere)
+![Portfolio page of my website in tablet view (1/3)](./docs/Screenshots/Portfolio-Tablet-P1.png)
+![Portfolio page of my website in tablet view (2/3)](./docs/Screenshots/Portfolio-Tablet-P2.png)
+![Portfolio page of my website in tablet view (3/3)](./docs/Screenshots/Portfolio-Tablet-P3.png)
 
 *Desktop view:*
 
-![Alt](../imagepathhere)
+![Portfolio page of my website in desktop view (1/2)](./docs/Screenshots/Portfolio-Desktop-P1.png)
+![Portfolio page of my website in desktop view (2/2)](./docs/Screenshots/Portfolio-Desktop-P2.png)
 
 ### **Page(s) 4: Individual portfolio posts**
 
@@ -237,21 +249,26 @@ There are a few different posts linked, along with a placeholder version:
 
 *Desktop view:*
 
-![Alt](../imagepathhere)
+![Portfolio post page of my website in desktop view (1/2)](./docs/Screenshots/PortfolioPost-Desktop-P1.png)
+![Portfolio post page of my website in desktop view (2/2)](./docs/Screenshots/PortfolioPost-Desktop-P2.png)
 
 ### **Page 5: Blog**
 
 *Mobile view:*
 
-![Alt](../imagepathhere)
+![Blog page of my website in mobile view (1/3)](./docs/Screenshots/Blog-Mobile-P1.png)
+![Blog page of my website in mobile view (2/3)](./docs/Screenshots/Blog-Mobile-P2.png)
+![Blog page of my website in mobile view (3/3)](./docs/Screenshots/Blog-Mobile-P3.png)
 
 *Tablet view:*
 
-![Alt](../imagepathhere)
+![Blog page of my website in tablet view (1/2)](./docs/Screenshots/Blog-Tablet-P1.png)
+![Blog page of my website in tablet view (2/2)](./docs/Screenshots/Blog-Tablet-P2.png)
 
 *Desktop view:*
 
-![Alt](../imagepathhere)
+![Blog page of my website in desktop view (1/2)](./docs/Screenshots/Blog-Desktop-P1.png)
+![Blog page of my website in desktop view (2/2)](./docs/Screenshots/Blog-Desktop-P2.png)
 
 ### **Page(s) 6: Individual blog posts**
 
@@ -259,26 +276,32 @@ There are a few different posts linked, along with a placeholder version:
 
 *Mobile view:*
 
-![Alt](../imagepathhere)
+![Blog post page of my website in mobile view (1/4)](./docs/Screenshots/BlogPost-Mobile-P1.png)
+![Blog post page of my website in mobile view (2/4)](./docs/Screenshots/BlogPost-Mobile-P2.png)
+![Blog post page of my website in mobile view (3/4)](./docs/Screenshots/BlogPost-Mobile-P3.png)
+![Blog post page of my website in mobile view (4/4)](./docs/Screenshots/BlogPost-Mobile-P4.png)
 
 *Tablet view:*
 
-![Alt](../imagepathhere)
+![Blog post page of my website in tablet view (1/3)](./docs/Screenshots/BlogPost-Tablet-P1.png)
+![Blog post page of my website in tablet view (2/3)](./docs/Screenshots/BlogPost-Tablet-P2.png)
+![Blog post page of my website in tablet view (3/3)](./docs/Screenshots/BlogPost-Tablet-P3.png)
 
 *Desktop view:*
 
-![Alt](../imagepathhere)
+![Blog post page of my website in desktop view (1/2)](./docs/Screenshots/BlogPost-Desktop-P1.png)
+![Blog post page of my website in desktop view (2/2)](./docs/Screenshots/BlogPost-Desktop-P2.png)
 
 ### **Page 7: Contact**
 
 *Mobile view:*
 
-![Alt](../imagepathhere)
+![Contact page of my website in mobile view](./docs/Screenshots/Contact-Mobile.png)
 
 *Tablet view:*
 
-![Alt](../imagepathhere)
+![Contact page of my website in tablet view](./docs/Screenshots/Contact-Tablet.png)
 
 *Desktop view:*
 
-![Alt](../imagepathhere)
+![Contact page of my website in desktop view](./docs/Screenshots/Contact-Desktop.png)

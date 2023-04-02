@@ -250,7 +250,7 @@ main .buttons {
 main button {
   display: block;
   margin: auto;
-  width: 220px;
+  width: clamp(100px, 45%, 220px);
   /* styling for the main button used across the site */
   background-color: #7E8D85;
   border: none;
