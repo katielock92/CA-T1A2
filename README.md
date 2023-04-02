@@ -9,8 +9,8 @@ ___
 
 ## **Links**
 - [Published portfolio website](https://katieelsomlock.com)
-- [Github repo](https://github.com/katielock92/portfolio)
-- [Presentation video](https://google.com)
+- [GitHub repo](https://github.com/katielock92/portfolio)
+- [Presentation video](https://www.canva.com/design/DAFeiibsjEs/r35r7yrxEIBhDT2SEvmOJA/view?utm_content=DAFeiibsjEs&utm_campaign=designshare&utm_medium=link&utm_source=recording_view)
 
 ___
 ## **Functionality and Features**
@@ -35,12 +35,11 @@ ___
 When planning, developing and deploying my portfolio website, I used the following tools and languages:
 - **Figma** - sitemap and wireframes
 - **VS Code** - IDE for writing code
-- **Markup** - for writing README
+- **Markdown** - for writing README
 - **HTML** - for the elements and content of web pages
 - **CSS and SCSS** - styling of web pages
 - **JavaScript** - for the interactivity on the mobile navigation menu
-- **Terminal (MacOS)** - committing local files to Github
-- **Github** - version control
+- **GitHub** - version control
 - **Cloudflare** - web hosting
 
 ___
@@ -241,11 +240,13 @@ There are a few different posts linked, along with a placeholder version:
 
 *Mobile view:*
 
-![Alt](../imagepathhere)
+![Portfolio post page of my website in mobile view (1/2)](./docs/Screenshots/PortfolioPost-Mobile-P1.png)
+![Portfolio post page of my website in desktop view (2/2)](./docs/Screenshots/PortfolioPost-Mobile-P2.png)
 
 *Tablet view:*
 
-![Alt](../imagepathhere)
+![Portfolio post page of my website in tablet view (1/2)](./docs/Screenshots/PortfolioPost-Tablet-P1.png)
+![Portfolio post page of my website in desktop view (2/2)](./docs/Screenshots/PortfolioPost-Tablet-P2.png)
 
 *Desktop view:*
 
