@@ -215,7 +215,7 @@ main h3 {
   color: #A2E3C4;
 }
 main h4 {
-  margin: 1rem 0 0 0;
+  margin: 1.5rem 0 0 0;
 }
 main .blog-image {
   align-items: center;
@@ -233,6 +233,9 @@ main article {
   display: flex;
   flex-direction: column;
   width: 90vw;
+}
+main article p {
+  margin: 1rem 0 0 0;
 }
 main button {
   display: block;
